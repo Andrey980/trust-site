@@ -85,12 +85,12 @@ const MenuItem = ({ item, isActive }: { item: any; isActive: boolean }) => {
 			</Link>
 			
 			{item.submenu && isHovered && (
-				<div className="absolute left-0 top-full pt-2 z-50">
+				<div className="absolute left-0 top-9 pt-2 z-50 bg-[#1082a6]">
 					<div className="bg-white shadow-lg min-w-[100px] border">
 						{item.submenu.map((subItem: any) => (								<Link
 								key={subItem.href}
 								href={subItem.href}
-								className="block text-xs tracking-wide px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#1082a6] text-sm whitespace-nowrap transition-colors duration-200 border-b border-[#1082a6] font-light last:border-b-0"
+								className="block text-xs tracking-wide px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#1082a6] text-sm whitespace-nowrap transition-colors duration-200 border-b border-gray-300 font-light last:border-b-0"
 							>
 								{subItem.label}
 							</Link>
