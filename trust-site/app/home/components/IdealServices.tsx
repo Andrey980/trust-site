@@ -5,7 +5,7 @@ import Link from 'next/link';
 const services = [
   {
     title: 'PLANO DE SAÚDE',
-    image: '/img/plano-de-saude.png9',
+    image: '/img/plano-de-saude.png',
     href: '/planos-de-saude',
   },
   {
