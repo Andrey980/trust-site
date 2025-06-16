@@ -68,7 +68,7 @@ export default function DepoimentosContent() {
             >
               <div className="bg-white rounded-lg shadow-md p-8 mx-auto max-w-2xl">
                 <blockquote className="italic text-gray-600 text-lg mb-4">
-                  "{depoimento.texto}"
+                  &ldquo;{depoimento.texto}&rdquo;
                 </blockquote>
                 <p className="text-[#50A3C5] font-semibold">
                   {depoimento.autor}

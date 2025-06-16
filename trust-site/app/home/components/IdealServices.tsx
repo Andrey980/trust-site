@@ -5,7 +5,7 @@ import Link from 'next/link';
 const services = [
   {
     title: 'PLANO DE SAÚDE',
-    image: '/img/plano-de-saude.png',
+    image: '/img/plano-de-saude.png9',
     href: '/planos-de-saude',
   },
   {
@@ -36,7 +36,7 @@ const IdealServices = () => {
 
         {/* Grid de serviços */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <Link 
               key={service.title} 
               href={service.href}

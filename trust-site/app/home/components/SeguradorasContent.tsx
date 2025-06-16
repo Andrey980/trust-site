@@ -68,7 +68,7 @@ export default function SeguradorasContent() {
         </h1>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-3 justify-items-center place-items-center mx-auto max-w-6xl">
-          {seguradoras.map((seguradora, index) => (
+          {seguradoras.map((seguradora) => (
             <div 
               key={seguradora.nome} 
               className="flex w-full items-center justify-center p-4 hover:opacity-80 transition-opacity"
