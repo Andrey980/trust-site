@@ -13,7 +13,7 @@ const slides = [
     id: 2,
     title: 'Sua família protegida em todos os momentos',
     subtitle: 'Seguro Residencial',
-    bgImage: '/img/hero-home.jpg',
+    bgImage: '/img/hero-home.png',
     buttonText: 'FAZER COTAÇÃO'
   }
 ];

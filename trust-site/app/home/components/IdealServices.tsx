@@ -5,22 +5,22 @@ import Link from 'next/link';
 const services = [
   {
     title: 'PLANO DE SAÚDE',
-    image: '/img/plano-de-saude.jpg',
+    image: '/img/plano-de-saude.png',
     href: '/planos-de-saude',
   },
   {
     title: 'AUTOMÓVEL',
-    image: '/img/automovel.jpg',
+    image: '/img/automovel.png',
     href: '/automovel',
   },
   {
     title: 'RESIDENCIAL',
-    image: '/img/residencial.jpg',
+    image: '/img/residencial.png',
     href: '/residencial',
   },
   {
     title: 'CONDOMÍNIO',
-    image: '/img/condominio.jpg',
+    image: '/img/condominio.png',
     href: '/condominio',
   },
 ];
