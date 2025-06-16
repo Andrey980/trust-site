@@ -82,7 +82,7 @@ export default function Footer() {
 								<li key={link.href}>
 									<Link
 										href={link.href}
-										className="text-gray-100 hover:text-white transition-colors"
+										className="text-gray-100 hover:text-[#ffe6a1] transition-colors"
 									>
 										{link.text}
 									</Link>
@@ -104,7 +104,7 @@ export default function Footer() {
 										<li key={link.href}>
 											<Link
 												href={link.href}
-												className="text-gray-100 hover:text-white transition-colors"
+												className="text-gray-100 hover:text-[#ffe6a1] transition-colors"
 											>
 												{link.text}
 											</Link>
@@ -116,7 +116,7 @@ export default function Footer() {
 										</p>
 										<a
 											href={`mailto:${footerLinks.relacionamento.contato.email}`}
-											className="text-gray-100 hover:text-white transition-colors"
+											className="text-gray-100 hover:text-[#ffe6a1] transition-colors"
 										>
 											{footerLinks.relacionamento.contato.email}
 										</a>
@@ -136,7 +136,7 @@ export default function Footer() {
 											href={social.href}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="text-gray-100 hover:text-white transition-colors"
+											className="text-gray-100 hover:text-[#ffe6a1] transition-colors"
 											aria-label={social.name}
 										>
 											{social.icon}
