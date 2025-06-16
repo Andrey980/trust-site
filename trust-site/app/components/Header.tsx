@@ -16,29 +16,7 @@ interface MenuItem {
 }
 
 const menuLinks: MenuItem[] = [
-  { href: '/', label: 'Home' },
-  { 
-    href: '/grupo-trust', 
-    label: 'Grupo Trust',
-    submenu: [
-      { href: '/sobre-o-grupo', label: 'Sobre o Grupo' },
-      { href: '/empresas', label: 'Empresas' },
-      { href: '/fundos-de-previdencia', label: 'Fundos de Previdência' },
-      { href: '/responsabilidade-social', label: 'Responsabilidade Social' },
-      { href: '/portfolio', label: 'Portfólio' },
-      { href: '/lgpd', label: 'LGPD' },
-    ]
-  },
-  { 
-    href: '/planos-de-saude', 
-    label: 'Planos de Saúde',
-    submenu: [
-      { href: '/planos-individuais', label: 'Planos Individuais' },
-      { href: '/planos-familiares', label: 'Planos Familiares' },
-      { href: '/planos-empresariais', label: 'Planos Empresariais' },
-      { href: '/coberturas', label: 'Coberturas' },
-    ]
-  },
+  { href: '/home', label: 'Home' },
   { 
     href: '/para-voce', 
     label: 'Para Você',
@@ -51,7 +29,7 @@ const menuLinks: MenuItem[] = [
   },
   { 
     href: '/para-seu-negocio', 
-    label: 'Para seu Negócio',
+    label: 'Para Sua Empresa',
     submenu: [
       { href: '/seguro-empresarial', label: 'Seguro Empresarial' },
       { href: '/responsabilidade-civil', label: 'Responsabilidade Civil' },
@@ -61,14 +39,24 @@ const menuLinks: MenuItem[] = [
   },
   { 
     href: '/para-administradores', 
-    label: 'Para Administradores de Imóveis',
+    label: 'Sinistro',
     submenu: [
       { href: '/condominio', label: 'Condomínio' },
       { href: '/garantia-locaticia', label: 'Garantia Locatícia' },
       { href: '/danos-fisicos', label: 'Danos Físicos' },
     ]
   },
-  { href: '/depoimentos', label: 'Depoimentos' },
+  { 
+    href: '/para-administradores', 
+    label: 'Seja Parceiro',
+    submenu: [
+      { href: '/condominio', label: 'Condomínio' },
+      { href: '/garantia-locaticia', label: 'Garantia Locatícia' },
+      { href: '/danos-fisicos', label: 'Danos Físicos' },
+    ]
+  },
+  { href: '/depoimentos', label: 'Sobre Nós' },
+  { href: '/depoimentos', label: 'Atendimento' },
 ];
 
 interface MenuItemProps {
@@ -78,23 +66,28 @@ interface MenuItemProps {
 
 const MenuItem = ({ item, isActive }: MenuItemProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const isAtendimento = item.label === 'Atendimento';
 
   return (
     <div
-      className="relative"
+      className="relative h-full flex align-center justify-center group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link
         href={item.href}
-        className={`relative py-2 transition-colors duration-200 ${
-          isActive ? 'text-[#ffe6a1] font-semibold' : 'hover:text-[#ffe6a1]'
+        className={`relative ${
+          isAtendimento
+            ? 'px-3 py-1 rounded-md bg-[#eee] text-[#1082a6] hover:bg-[#b3dffd] hover:text-[#1082a6] transition'
+            : `py-2 transition-colors duration-200 ${
+                isActive ? 'text-[#ddd] font-semibold' : 'hover:text-[#b3dfeb]'
+              }`
         }`}
       >
         {item.label}
-        {isActive && (
+        {isActive && !isAtendimento && (
           <span
-            className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[3px] w-8 rounded bg-[#cbb278]"
+            className="absolute left-1/2 -translate-x-1/2 bottom-0 h-[3px] w-8 rounded bg-[#b3dfeb]"
             style={{ content: '' }}
           />
         )}
@@ -120,55 +113,41 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
 };
 
 const Header = () => {
-	const pathname = usePathname();
+  const pathname = usePathname();
+  return (    <header className="fixed top-0 left-0 right-0 z-50 py-2 w-full bg-[#1082a6] shadow-md">
+      {/* Main header with logo and navigation */}
+      <div className="w-full">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="py-4">
+              <Image
+                src="/img/header.png"
+                alt="Trust Seguros"
+                width={200}
+                height={40}
+                priority
+                className="h-auto"
+              />
+            </Link>
 
-	return (
-		<header className="w-full bg-[#1082a6]">
-			{/* Top navigation */}
-			<div className="w-full border-b border-white/20">
-				<div className="container mx-auto flex justify-end">
-					<div className="flex items-center h-8 text-xs gap-6 text-white">
-						<Link href="/fale-conosco" className="hover:text-[#ffe6a1]">
-							Fale Conosco
-						</Link>
-					</div>
-				</div>
-			</div>
-
-			{/* Logo section with borders */}
-			<div className="w-full border-t border-b border-white/20">
-				<div className="container mx-auto flex justify-center py-4">
-					<Link href="/">
-						<Image
-							src="/img/header.png"
-							alt="Trust Seguros"
-							width={200}
-							height={40}
-							priority
-							className="h-auto"
-						/>
-					</Link>
-				</div>
-			</div>
-
-			{/* Main navigation in separate line */}
-			<div className="w-full border-b border-white/20">
-				<div className="container mx-auto">
-					<nav>
-						<div className="flex justify-center gap-8 text-[15px] font-serif text-white py-3">
-							{menuLinks.map((item) => (
-								<MenuItem
-									key={item.href}
-									item={item}
-									isActive={pathname === item.href}
-								/>
-							))}
-						</div>
-					</nav>
-				</div>
-			</div>
-		</header>
-	);
+            {/* Main navigation */}
+            <nav className="flex-1 ml-12">
+              <div className="flex justify-end gap-10 text-[15px] font-serif text-white">
+                {menuLinks.map((item) => (
+                  <MenuItem
+                    key={item.href}
+                    item={item}
+                    isActive={pathname === item.href}
+                  />
+                ))}
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 };
 
 export default Header;
