@@ -4,69 +4,72 @@ import Link from 'next/link';
 
 const services = [
   {
-    title: 'PLANO DE SAÚDE',
-    image: '/img/plano-de-saude.png',
-    href: '/planos-de-saude',
+    title: 'TITULO DE CAPITALIZAÇÃO',
+    icon: '/img/services/moedas.svg',
+    description: 'Garantia para locação de imóveis',
+    href: '/titulo-capitalizacao',
+    bgColor: 'bg-[#1082a6]',
   },
   {
-    title: 'AUTOMÓVEL',
-    image: '/img/automovel.png',
-    href: '/automovel',
+    title: 'SEGURO FIANÇA',
+    icon: '/img/services/fianca.svg',
+    description: 'Garantia para locação de imóveis',
+    href: '/seguro-fianca',
+    bgColor: 'bg-[#0c6a87]',
   },
   {
-    title: 'RESIDENCIAL',
-    image: '/img/residencial.png',
-    href: '/residencial',
-  },
-  {
-    title: 'CONDOMÍNIO',
-    image: '/img/condominio.png',
-    href: '/condominio',
+    title: 'SEGURO INCÊNDIO',
+    icon: '/img/services/flame-depth.svg',
+    description: 'Proteção completa para seu patrimônio',
+    href: '/seguro-incendio',
+    bgColor: 'bg-[#085269]',
   },
 ];
 
 const IdealServices = () => {
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Título */}
-        <h2 className="text-center text-3xl font-light text-[#1082a6] mb-12">
-          IDEAL PARA VOCÊ
+        <h2 className="text-center text-3xl font-light text-[#1082a6] mb-12 uppercase">
+          principais produtos
         </h2>
 
         {/* Grid de serviços */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Link 
-              key={service.title} 
+            <Link
+              key={service.title}
               href={service.href}
-              className="group relative block overflow-hidden h-[200px]"
+              className={`group rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${service.bgColor}`}
             >
-              {/* Imagem de fundo */}
-              <div className="absolute inset-0">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-                {/* Overlay escuro */}
-                <div className="absolute inset-0 bg-black/50" />
-              </div>
-
-              {/* Título e setas */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <h3 className="text-white text-2xl font-bold mb-6 text-center">
-                  {service.title}
-                </h3>
-                {/* Setas decorativas */}
-                <div className="flex gap-2">
-                  {[...Array(3)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-8 h-8 border-t-2 border-r-2 border-white transform rotate-45 group-hover:translate-x-2 transition-transform"
+              <div className="p-8">
+                {/* Ícone */}
+                <div className="mb-6 flex justify-center">
+                  <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Image
+                      src={service.icon}
+                      alt={service.title}
+                      width={40}
+                      height={40}
+                      className="text-white"
                     />
-                  ))}
+                  </div>
+                </div>
+
+                {/* Conteúdo */}
+                <div className="text-center">
+                  <h3 className="text-white text-xl font-semibold mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/80 text-sm mb-6">
+                    {service.description}
+                  </p>
+
+                  {/* Seta indicativa */}
+                  <div className="flex justify-center">
+                    <div className="w-8 h-8 border-t-2 border-r-2 border-white/60 transform rotate-45 group-hover:translate-x-2 transition-transform" />
+                  </div>
                 </div>
               </div>
             </Link>

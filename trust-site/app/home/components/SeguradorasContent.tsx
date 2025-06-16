@@ -12,10 +12,6 @@ const seguradoras = [
     logo: "/img/seguradoras/tokio.png"
   },
   {
-    nome: "Sompo Seguros",
-    logo: "/img/seguradoras/sompo.png"
-  },
-  {
     nome: "Azul Seguros",
     logo: "/img/seguradoras/azul.png"
   },
@@ -40,18 +36,11 @@ const seguradoras = [
     nome: "MSIG",
     logo: "/img/seguradoras/msig.png"
   },
-  {
-    nome: "Allianz",
-    logo: "/img/seguradoras/allianz.png"
-  },
+
   // Terceira linha
   {
     nome: "HDI Seguros",
     logo: "/img/seguradoras/hdi.png"
-  },
-  {
-    nome: "Liberty Seguros",
-    logo: "/img/seguradoras/liberty.png"
   },
   {
     nome: "Zurich",
@@ -67,7 +56,7 @@ export default function SeguradorasContent() {
           Trabalhamos com as principais seguradoras
         </h1>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-3 justify-items-center place-items-center mx-auto max-w-6xl">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-1 justify-items-center place-items-center mx-auto max-w-4xl">
           {seguradoras.map((seguradora) => (
             <div 
               key={seguradora.nome} 
