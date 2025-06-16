@@ -4,7 +4,18 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-const menuLinks = [
+interface SubMenuItem {
+	href: string;
+	label: string;
+}
+
+interface MenuItem {
+	href: string;
+	label: string;
+	submenu?: SubMenuItem[];
+}
+
+const menuLinks: MenuItem[] = [
 	{ href: '/', label: 'Home' },
 	{ 
 		href: '/grupo-trust', 
@@ -60,7 +71,12 @@ const menuLinks = [
 	{ href: '/depoimentos', label: 'Depoimentos' },
 ];
 
-const MenuItem = ({ item, isActive }: { item: any; isActive: boolean }) => {
+interface MenuItemProps {
+	item: MenuItem;
+	isActive: boolean;
+}
+
+const MenuItem = ({ item, isActive }: MenuItemProps) => {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
@@ -85,12 +101,13 @@ const MenuItem = ({ item, isActive }: { item: any; isActive: boolean }) => {
 			</Link>
 			
 			{item.submenu && isHovered && (
-				<div className="absolute left-0 top-9 pt-2 z-50 bg-[#1082a6]">
-					<div className="bg-white shadow-lg min-w-[100px] border">
-						{item.submenu.map((subItem: any) => (								<Link
+				<div className="absolute left-0 top-full pt-2 z-50">
+					<div className="bg-white rounded-md shadow-lg py-2 min-w-[200px]">
+						{item.submenu.map((subItem) => (
+							<Link
 								key={subItem.href}
 								href={subItem.href}
-								className="block text-xs tracking-wide px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#1082a6] text-sm whitespace-nowrap transition-colors duration-200 border-b border-gray-300 font-light last:border-b-0"
+								className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[#1082a6] text-sm whitespace-nowrap transition-colors duration-200 border-b border-gray-100 last:border-b-0"
 							>
 								{subItem.label}
 							</Link>

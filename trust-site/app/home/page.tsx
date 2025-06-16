@@ -1,5 +1,6 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import WhatsappButton from '../components/WhatsappButton';
 import DepoimentosContent from './components/DepoimentosContent';
 // import GradientContainer from './components/GradientContainer';
 import HeroContent from './components/HeroContent';
@@ -17,6 +18,7 @@ export default function HomePage() {
       <HistoryContent />
       <DepoimentosContent />
       <SeguradorasContent />
+      <WhatsappButton />
       <Footer />
       {/* Adicione mais seções aqui conforme necessário */}
     </main>
