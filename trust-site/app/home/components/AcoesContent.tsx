@@ -34,7 +34,7 @@ const quickActions = [
   },
   {
     id: 6,
-    label: "Minha Rescisão",
+    label: "Minha Renovação",
     href: "#",
     icon: "📋" // Placeholder para ícone
   }
