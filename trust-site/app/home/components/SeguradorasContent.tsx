@@ -45,6 +45,26 @@ const seguradoras = [
   {
     nome: "Zurich",
     logo: "/img/seguradoras/zurich.png"
+  },
+  {
+    nome: "Pottencial",
+    logo: "/img/seguradoras/pottencial.png"
+  },
+  {
+    nome: "Junto",
+    logo: "/img/seguradoras/junto.png"
+  },
+  {
+    nome: "Darwin",
+    logo: "/img/seguradoras/darwin.png"
+  },
+  {
+    nome: "Akad",
+    logo: "/img/seguradoras/akad.png"
+  },
+  {
+    nome: "Too",
+    logo: "/img/seguradoras/too.png"
   }
 ];
 
