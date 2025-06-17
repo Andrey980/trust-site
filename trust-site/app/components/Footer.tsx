@@ -47,11 +47,11 @@ const footerLinks = {
 	sobre: {
 		title: 'SOBRE',
 		links: [
-			{ text: 'Sobre a Trust', href: '/sobre-a-trust' },
 			{ text: 'Para Você', href: '/para-voce' },
 			{ text: 'Para sua Empresa', href: '/para-sua-empresa' },
-			{ text: 'Para Administradores de Imóveis', href: '/para-administradores' },
-			{ text: 'Depoimentos', href: '/depoimentos' },
+			{ text: 'Sinistro', href: '/sinistro' },
+			{ text: 'Seja Parceiro', href: '/seja-parceiro' },
+			{ text: 'Sobre Nós', href: '/sobre' },
 		],
 	},
 	relacionamento: {
