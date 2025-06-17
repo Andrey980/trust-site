@@ -5,19 +5,19 @@ const quickActions = [
   {
     id: 1,
     label: "Cotação",
-    href: "#",
+    href: "https://wa.me/5511933372957?text=Ol%C3%A1%21%20Eu%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o.",
     icon: "🔍" // Placeholder para ícone
   },
   {
     id: 2,
     label: "Consulta Apólice",
-    href: "#",
+    href: "https://wa.me/5511933372957?text=Ol%C3%A1%21%20Eu%20gostaria%20de%20consultar%20minha%20ap%C3%B3lice.",
     icon: "📄" // Placeholder para ícone
   },
   {
     id: 3,
     label: "2ª Via Boleto",
-    href: "#",
+    href: "https://wa.me/5511933372957?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20a%202%C2%AA%20via%20dos%20meus%20boletos",
     icon: "📑" // Placeholder para ícone
   },
   {

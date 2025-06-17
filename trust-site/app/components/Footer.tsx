@@ -61,8 +61,8 @@ const footerLinks = {
 			{ text: 'LGPD', href: '/lgpd' },
 		],
 		contato: {
-			telefone: '11 3226-9600',
-			email: 'faleconosco@trust.com.br',
+			telefone: '11 933372957',
+			// email: 'faleconosco@trust.com.br',
 		},
 	},
 };
@@ -114,12 +114,6 @@ export default function Footer() {
 										<p className="text-gray-100">
 											{footerLinks.relacionamento.contato.telefone}
 										</p>
-										<a
-											href={`mailto:${footerLinks.relacionamento.contato.email}`}
-											className="text-gray-100 hover:text-[#ffe6a1] transition-colors"
-										>
-											{footerLinks.relacionamento.contato.email}
-										</a>
 									</li>
 								</ul>
 							</div>

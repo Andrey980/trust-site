@@ -28,7 +28,7 @@ const menuLinks: MenuItem[] = [
     ]
   },
   { 
-    href: '/para-seu-negocio', 
+    href: '/para-sua-empresa', 
     label: 'Para Sua Empresa',
     submenu: [
       { href: '/seguro-empresarial', label: 'Seguro Empresarial' },
@@ -38,7 +38,7 @@ const menuLinks: MenuItem[] = [
     ]
   },
   { 
-    href: '/para-administradores', 
+    href: '/sinistro', 
     label: 'Sinistro',
     submenu: [
       { href: '/condominio', label: 'Condomínio' },
@@ -47,7 +47,7 @@ const menuLinks: MenuItem[] = [
     ]
   },
   { 
-    href: '/para-administradores', 
+    href: '/seja-parceiro', 
     label: 'Seja Parceiro',
     submenu: [
       { href: '/condominio', label: 'Condomínio' },
@@ -55,8 +55,8 @@ const menuLinks: MenuItem[] = [
       { href: '/danos-fisicos', label: 'Danos Físicos' },
     ]
   },
-  { href: '/depoimentos', label: 'Sobre Nós' },
-  { href: '/depoimentos', label: 'Atendimento' },
+  { href: '/sobre', label: 'Sobre Nós' },
+  { href: '/atendimento', label: 'Atendimento' },
 ];
 
 interface MenuItemProps {
@@ -75,12 +75,10 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <Link
-        href={item.href}
-        className={`relative ${
-          isAtendimento
-            ? 'px-3 py-1 rounded-md bg-[#eee] text-[#1082a6] hover:bg-[#b3dffd] hover:text-[#1082a6] transition'
+        href={item.href}        className={`relative ${
+          isAtendimento            ? 'px-3 py-1 rounded-md bg-[#eee] text-[#1082a6] hover:bg-[#b3dffd] hover:text-[#1082a6] transition font-normal'
             : `py-2 transition-colors duration-200 ${
-                isActive ? 'text-[#ddd] font-semibold' : 'hover:text-[#b3dfeb]'
+                isActive ? 'text-[#fff] font-normal' : 'hover:text-[#fff] font-normal'
               }`
         }`}
       >
@@ -100,7 +98,7 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
               <Link
                 key={subItem.href}
                 href={subItem.href}
-                className="block text-xs tracking-wide px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-[#1082a6] text-sm whitespace-nowrap transition-colors duration-200 border-b border-gray-300 font-light last:border-b-0"
+                className="block text-xs tracking-wide px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-[#1082a6] text-sm whitespace-nowrap transition-colors duration-200 border-b border-gray-300 font-normal last:border-b-0"
               >
                 {subItem.label}
               </Link>
@@ -114,7 +112,8 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
 
 const Header = () => {
   const pathname = usePathname();
-  return (    <header className="fixed top-0 left-0 right-0 z-50 py-2 w-full bg-[#1082a6] shadow-md">
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 py-2 w-full bg-[#1082a6] shadow-md">
       {/* Main header with logo and navigation */}
       <div className="w-full">
         <div className="container mx-auto px-4">
@@ -133,7 +132,7 @@ const Header = () => {
 
             {/* Main navigation */}
             <nav className="flex-1 ml-12">
-              <div className="flex justify-end gap-10 text-[15px] font-serif text-white">
+              <div className="flex justify-end gap-10 text-[15px] text-white font-normal tracking-wide">
                 {menuLinks.map((item) => (
                   <MenuItem
                     key={item.href}

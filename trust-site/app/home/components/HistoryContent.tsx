@@ -8,13 +8,13 @@ export default function HistoryContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Lado esquerdo - Imagem */}
           <div className="relative w-full h-full aspect-video rounded-lg overflow-hidden shadow-xl">
-            <Image
+            {/* <Image
               src="/img/trust-building.jpg"
               alt="Prédio da Trust"
               fill
               className="object-cover"
               priority
-            />
+            /> */}
             {/* Overlay com o ano */}
             <div className="absolute bottom-0 right-0 bg-black/80 px-6 py-3">
               <span className="text-white text-xl font-bold">1975</span>
