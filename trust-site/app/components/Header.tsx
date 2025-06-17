@@ -76,7 +76,7 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
     >
       <Link
         href={item.href}        className={`relative ${
-          isAtendimento            ? 'px-3 py-1 rounded-md bg-[#eee] text-[#1082a6] hover:bg-[#b3dffd] hover:text-[#1082a6] transition font-normal'
+          isAtendimento            ? 'px-2 py-2 rounded-md bg-[#eee] text-[#1082a6] hover:bg-[#b3dffd] hover:text-[#1082a6] transition font-normal'
             : `py-2 transition-colors duration-200 ${
                 isActive ? 'text-[#fff] font-normal' : 'hover:text-[#fff] font-normal'
               }`
@@ -104,6 +104,66 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
               </Link>
             ))}
           </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const MobileMenuItem = ({ item, onClose }: { item: MenuItem; onClose: () => void }) => {
+  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+  
+  return (
+    <div className="border-b border-gray-200">
+      <div className="flex items-center justify-between">
+        <Link
+          href={item.submenu ? '#' : item.href}
+          onClick={(e) => {
+            if (item.submenu) {
+              e.preventDefault();
+              setIsSubmenuOpen(!isSubmenuOpen);
+            } else {
+              onClose();
+            }
+          }}
+          className="flex-1 px-4 py-3 text-gray-700"
+        >
+          {item.label}
+        </Link>
+        {item.submenu && (
+          <button
+            onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
+            className="px-4 py-3 text-gray-400"
+            aria-label="Toggle submenu"
+          >
+            <svg
+              className={`w-4 h-4 transform transition-transform ${
+                isSubmenuOpen ? 'rotate-180' : ''
+              }`}
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        )}
+      </div>
+      {item.submenu && isSubmenuOpen && (
+        <div className="bg-gray-50">
+          {item.submenu.map((subItem) => (
+            <Link
+              key={subItem.href}
+              href={subItem.href}
+              onClick={onClose}
+              className="block px-8 py-3 text-sm text-gray-600 hover:bg-gray-100"
+            >
+              {subItem.label}
+            </Link>
+          ))}
         </div>
       )}
     </div>
@@ -169,66 +229,13 @@ const Header = () => {
       {/* Mobile Menu */}
       <div className={`lg:hidden bg-white ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <nav className="border-t border-gray-200">
-          {menuLinks.map((item, index) => {
-            const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-            return (
-              <div key={index} className="border-b border-gray-200">
-                <div className="flex items-center justify-between">
-                  <Link
-                    href={item.submenu ? '#' : item.href}
-                    onClick={(e) => {
-                      if (item.submenu) {
-                        e.preventDefault();
-                        setIsSubmenuOpen(!isSubmenuOpen);
-                      } else {
-                        setIsMobileMenuOpen(false);
-                      }
-                    }}
-                    className="flex-1 px-4 py-3 text-gray-700"
-                  >
-                    {item.label}
-                  </Link>
-                  {item.submenu && (
-                    <button
-                      onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
-                      className="px-4 py-3 text-gray-400"
-                      aria-label="Toggle submenu"
-                    >
-                      <svg
-                        className={`w-4 h-4 transform transition-transform ${
-                          isSubmenuOpen ? 'rotate-180' : ''
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    </button>
-                  )}
-                </div>
-                {item.submenu && isSubmenuOpen && (
-                  <div className="bg-gray-50">
-                    {item.submenu.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        href={subItem.href}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block px-8 py-2.5 text-gray-600 border-t border-gray-100 hover:bg-gray-100"
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          {menuLinks.map((item, index) => (
+            <MobileMenuItem
+              key={index}
+              item={item}
+              onClose={() => setIsMobileMenuOpen(false)}
+            />
+          ))}
         </nav>
       </div>
     </header>
