@@ -61,12 +61,12 @@ const HeroContent = () => {
       >
         {/* Background Image */}
         <div 
-          className="absolute inset-0"
+          className={`absolute inset-0 ${slide.type === 'full-image' ? 'bg-center bg-no-repeat' : ''}`}
           style={{
             backgroundImage: `url(${slide.bgImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: slide.imagePosition || '50% 35%',
-            backgroundRepeat: 'no-repeat',
+            backgroundSize: slide.type === 'full-image' ? 'contain' : 'cover',
+            backgroundPosition: slide.type === 'full-image' ? 'center center' : (slide.imagePosition || '50% 35%'),
+            backgroundColor: slide.type === 'full-image' ? '#1082a6' : 'transparent',
           }}
         />
         

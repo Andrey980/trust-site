@@ -17,7 +17,7 @@ export default function HistoryContent() {
             /> */}
             {/* Overlay com o ano */}
             <div className="absolute bottom-0 right-0 bg-black/80 px-6 py-3">
-              <span className="text-white text-xl font-bold">1975</span>
+              <span className="text-white text-xl font-bold"></span>
             </div>
           </div>
 
@@ -41,7 +41,7 @@ export default function HistoryContent() {
               <h3 className="text-xl font-medium mb-4 tracking-wider">
                 Nosso Propósito
               </h3>
-              <p className="text-base leading-relaxed mb-4 font-medium">
+              <p className="text-base leading-relaxed mb-4 font-medium text-justify">
                 Conectar pessoas e empresas com soluções inteligentes em seguros.  <span className="text-base font-normal leading-relaxed">
                 Garantimos tranquilidade, confiança e crescimento seguro por meio de uma
                 atuação ética, ágil e estratégica. </span>
