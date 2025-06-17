@@ -112,12 +112,13 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
 
 const Header = () => {
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-2 w-full bg-[#1082a6] shadow-md">
-      {/* Main header with logo and navigation */}
       <div className="w-full">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-end">
             {/* Logo */}
             <Link href="/" className="py-4">
               <Image
@@ -126,12 +127,31 @@ const Header = () => {
                 width={200}
                 height={40}
                 priority
-                className="h-auto"
+                className="h-auto w-auto max-w-[150px] md:max-w-[200px]"
               />
             </Link>
 
-            {/* Main navigation */}
-            <nav className="flex-1 ml-12">
+            {/* Hamburger Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden text-white"
+              aria-label="Menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex lg:justify-end flex-1">
               <div className="flex justify-end gap-10 text-[15px] text-white font-normal tracking-wide">
                 {menuLinks.map((item) => (
                   <MenuItem
@@ -144,6 +164,72 @@ const Header = () => {
             </nav>
           </div>
         </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`lg:hidden bg-white ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <nav className="border-t border-gray-200">
+          {menuLinks.map((item, index) => {
+            const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+            return (
+              <div key={index} className="border-b border-gray-200">
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={item.submenu ? '#' : item.href}
+                    onClick={(e) => {
+                      if (item.submenu) {
+                        e.preventDefault();
+                        setIsSubmenuOpen(!isSubmenuOpen);
+                      } else {
+                        setIsMobileMenuOpen(false);
+                      }
+                    }}
+                    className="flex-1 px-4 py-3 text-gray-700"
+                  >
+                    {item.label}
+                  </Link>
+                  {item.submenu && (
+                    <button
+                      onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
+                      className="px-4 py-3 text-gray-400"
+                      aria-label="Toggle submenu"
+                    >
+                      <svg
+                        className={`w-4 h-4 transform transition-transform ${
+                          isSubmenuOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+                {item.submenu && isSubmenuOpen && (
+                  <div className="bg-gray-50">
+                    {item.submenu.map((subItem, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        href={subItem.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block px-8 py-2.5 text-gray-600 border-t border-gray-100 hover:bg-gray-100"
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </nav>
       </div>
     </header>
   );
