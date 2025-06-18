@@ -18,8 +18,8 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({ benefits }) => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Benefícios Exclusivos</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Oferecemos soluções completas para sua empresa com vantagens que 
-            fazem a diferença na proteção do seu negócio.
+            Oferecemos soluções completas de garantias com vantagens que 
+            fazem a diferença para sua segurança e tranquilidade.
           </p>
         </div>
         

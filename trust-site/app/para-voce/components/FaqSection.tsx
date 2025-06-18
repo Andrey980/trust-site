@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 interface FAQ {
   question: string;
@@ -11,11 +11,11 @@ interface FaqSectionProps {
 }
 
 const FaqSection: React.FC<FaqSectionProps> = ({ faqs }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+//   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+//   const toggleFaq = (index: number) => {
+//     setOpenIndex(openIndex === index ? null : index);
+//   };
 
   return (
      <section className="py-16 bg-gray-50">
