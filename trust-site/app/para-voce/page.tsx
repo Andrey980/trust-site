@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
@@ -7,7 +7,7 @@ import WhatsappButton from '../components/WhatsappButton';
 // Importando os componentes específicos da página
 import HeroBanner from './components/HeroBanner';
 import SubMenuNavigation from './components/SubMenuNavigation';
-import ProductsGrid from './components/ProductsGrid';
+// import ProductsGrid from './components/ProductsGrid';
 import BenefitsSection from './components/BenefitsSection';
 import FaqSection from './components/FaqSection';
 import CtaSection from './components/CtaSection';
@@ -271,44 +271,44 @@ export default function ParaVocePage() {
   };
 
   // Dados para os produtos
-  const products = [
-    {
-      title: 'Seguro Auto',
-      description: 'Proteção completa para seu veículo com coberturas flexíveis para colisão, roubo, furto e responsabilidade civil.',
-      icon: '/file.svg',
-      link: '/auto',
-    },
-    {
-      title: 'Seguro Residencial',
-      description: 'Segurança para sua casa contra incêndio, roubo, danos elétricos e responsabilidade civil, com serviços de assistência 24h.',
-      icon: '/window.svg',
-      link: '/residencial',
-    },
-    {
-      title: 'Seguro de Vida',
-      description: 'Proteção financeira para você e sua família em casos de imprevistos, com coberturas para morte, invalidez e doenças graves.',
-      icon: '/file.svg',
-      link: '/vida',
-    },
-    {
-      title: 'Seguro Viagem',
-      description: 'Tranquilidade em suas viagens com cobertura médica, odontológica, farmacêutica e assistência 24h no Brasil e exterior.',
-      icon: '/globe.svg',
-      link: '/viagem',
-    },
-    {
-      title: 'Seguro Celular',
-      description: 'Proteção contra quebra acidental, roubo e furto qualificado para seu smartphone, com reposição rápida.',
-      icon: '/file.svg',
-      link: '/celular',
-    },
-    {
-      title: 'Previdência Privada',
-      description: 'Planeje seu futuro com planos de previdência adaptados aos seus objetivos, com benefícios tributários e opções de renda.',
-      icon: '/file.svg',
-      link: '/previdencia-privada',
-    },
-  ];
+  // const products = [
+  //   {
+  //     title: 'Seguro Auto',
+  //     description: 'Proteção completa para seu veículo com coberturas flexíveis para colisão, roubo, furto e responsabilidade civil.',
+  //     icon: '/file.svg',
+  //     link: '/auto',
+  //   },
+  //   {
+  //     title: 'Seguro Residencial',
+  //     description: 'Segurança para sua casa contra incêndio, roubo, danos elétricos e responsabilidade civil, com serviços de assistência 24h.',
+  //     icon: '/window.svg',
+  //     link: '/residencial',
+  //   },
+  //   {
+  //     title: 'Seguro de Vida',
+  //     description: 'Proteção financeira para você e sua família em casos de imprevistos, com coberturas para morte, invalidez e doenças graves.',
+  //     icon: '/file.svg',
+  //     link: '/vida',
+  //   },
+  //   {
+  //     title: 'Seguro Viagem',
+  //     description: 'Tranquilidade em suas viagens com cobertura médica, odontológica, farmacêutica e assistência 24h no Brasil e exterior.',
+  //     icon: '/globe.svg',
+  //     link: '/viagem',
+  //   },
+  //   {
+  //     title: 'Seguro Celular',
+  //     description: 'Proteção contra quebra acidental, roubo e furto qualificado para seu smartphone, com reposição rápida.',
+  //     icon: '/file.svg',
+  //     link: '/celular',
+  //   },
+  //   {
+  //     title: 'Previdência Privada',
+  //     description: 'Planeje seu futuro com planos de previdência adaptados aos seus objetivos, com benefícios tributários e opções de renda.',
+  //     icon: '/file.svg',
+  //     link: '/previdencia-privada',
+  //   },
+  // ];
 
   // Dados para os benefícios
   const benefits = [
