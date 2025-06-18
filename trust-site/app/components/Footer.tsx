@@ -61,7 +61,7 @@ const footerLinks = {
 			{ text: 'LGPD', href: '/lgpd' },
 		],
 		contato: {
-			telefone: '11 933372957',
+			telefone: '+55 11 933372957',
 			// email: 'faleconosco@trust.com.br',
 		},
 	},

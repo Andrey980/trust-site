@@ -21,38 +21,59 @@ const menuLinks: MenuItem[] = [
     href: '/para-voce', 
     label: 'Para Você',
     submenu: [
-      { href: '/seguro-auto', label: 'Seguro Auto' },
-      { href: '/seguro-residencial', label: 'Seguro Residencial' },
-      { href: '/seguro-vida', label: 'Seguro de Vida' },
+      { href: '/auto', label: 'Auto' },
+      { href: '/bike', label: 'Bike' },
+      { href: '/celular', label: 'Celular' },
+      { href: '/consorcio', label: 'Consórcio' },
+      { href: '/portateis', label: 'Equipamentos Portáteis' },
+      { href: '/odonto', label: 'Odontológico' },
       { href: '/previdencia-privada', label: 'Previdência Privada' },
+      { href: '/rc-profissional', label: 'Responsabilidade Civil Profissional' },
+      { href: '/residencial', label: 'Residencial' },
+      { href: '/vida', label: 'Vida' },
+      { href: '/viagem', label: 'Viagem' },
+
     ]
   },
   { 
     href: '/para-sua-empresa', 
     label: 'Para Sua Empresa',
     submenu: [
-      { href: '/seguro-empresarial', label: 'Seguro Empresarial' },
-      { href: '/responsabilidade-civil', label: 'Responsabilidade Civil' },
-      { href: '/frota', label: 'Frota' },
-      { href: '/vida-empresarial', label: 'Vida Empresarial' },
+    { href: '/celular', label: 'Celular' },
+    { href: '/consorcio', label: 'Consorcio' },
+    { href: '/D&O', label: 'D&O' },
+    { href: '/portateis', label: 'Equipamentos Portateis' },
+    { href: '/frota', label: 'Frota' },
+    { href: '/plano-saude', label: 'Plano de Saúde' },
+    { href: '/responsabilidade-civil', label: 'Responsabilidade Civil' },
+    { href: '/seguro-empresarial', label: 'Seguro Empresarial' },
+    { href: '/seguro-garantia', label: 'Seguro Garantia' },
+    { href: '/vida-empresarial', label: 'Vida Empresarial' },
+    ]
+  },
+  { 
+    href: '/garantias', 
+    label: 'Garantias',
+    submenu: [
+      { href: '/seguro-fiança', label: 'Seguro Fiança' },
+      { href: '/titulo-capitalizacao', label: 'Titulo Capitalização' },
     ]
   },
   { 
     href: '/sinistro', 
     label: 'Sinistro',
     submenu: [
-      { href: '/condominio', label: 'Condomínio' },
-      { href: '/garantia-locaticia', label: 'Garantia Locatícia' },
-      { href: '/danos-fisicos', label: 'Danos Físicos' },
+      { href: '/abrir-sinistro', label: 'Abrir um Sinistro' },
+      { href: '/como-funciona', label: 'Como Funciona' },
     ]
   },
   { 
     href: '/seja-parceiro', 
     label: 'Seja Parceiro',
     submenu: [
-      { href: '/condominio', label: 'Condomínio' },
-      { href: '/garantia-locaticia', label: 'Garantia Locatícia' },
-      { href: '/danos-fisicos', label: 'Danos Físicos' },
+      { href: '/admnistrador', label: 'Admnistrador' },
+      { href: '/corretor-autonomo', label: 'Corretor Autônomo' },
+      { href: '/imobiliaria', label: 'Imobiliaria' },
     ]
   },
   { href: '/sobre', label: 'Sobre Nós' },

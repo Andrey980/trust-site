@@ -16,14 +16,14 @@ interface SlideContent {
 }
 
 const slides: SlideContent[] = [
-  {
-    id: 1,
-    type: 'content',
-    bgImage: '/img/fundo-branco.png',
-    title: 'Segurança que impulsiona, proteção que transforma',
-    imagePosition: 'center',
-    overlay: true,
-  },
+  // {
+  //   id: 1,
+  //   type: 'content',
+  //   bgImage: '/img/fundo-branco.png',
+  //   title: 'Segurança que impulsiona, proteção que transforma',
+  //   imagePosition: 'center',
+  //   overlay: true,
+  // },
   {
     id: 2,
     type: 'content',
