@@ -91,7 +91,7 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
 
   return (
     <div
-      className="relative h-full flex align-center justify-center group"
+      className="relative lg:py-8 h-full flex align-center justify-center group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -113,7 +113,7 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
       </Link>
       
       {item.submenu && isHovered && (
-        <div className="absolute left-0 top-9 pt-2 z-50 bg-[#1082a6]">
+        <div className="absolute left-0 top-26 pt-2 z-50 bg-[#1082a6]">
           <div className="bg-white shadow-lg min-w-[100px] border">
             {item.submenu.map((subItem: SubMenuItem) => (
               <Link
@@ -233,7 +233,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex lg:justify-end flex-1">
-              <div className="flex justify-end gap-10 text-[15px] text-white font-normal tracking-wide">
+              <div className="flex lg: justify-end gap-10 text-[15px] text-white font-normal tracking-wide">
                 {menuLinks.map((item) => (
                   <MenuItem
                     key={item.href}
