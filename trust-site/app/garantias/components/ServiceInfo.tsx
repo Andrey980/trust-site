@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 interface ServiceInfoProps {
   serviceId: string;
@@ -14,7 +14,7 @@ const ServiceInfo: React.FC<ServiceInfoProps> = ({
   title,
   description,
   features,
-  imageUrl
+  // imageUrl
 }) => {
   const showSteps = title == "Seguro Fiança";
 
