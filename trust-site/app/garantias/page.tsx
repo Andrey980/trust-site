@@ -28,19 +28,18 @@ export default function GarantiasPage() {
       description: 'Alternativa ao fiador tradicional para locação de imóveis',
       longDescription: 'Seguro Fiança é uma solução que permite a locação de um imóvel residencial sem a necessidade de um fiador ou depósito caução. Definitivamente, é a mais sólida garantia locatícia do mercado. Um produto completo que cobre todas as eventualidades de uma locação: inadimplência do aluguel, condomínio, IPTU, água, luz e gás, além de danos ao imóvel e pintura.',
       features: [
-        'Análise de crédito simplificada e rápida',
-        'Sem necessidade de apresentar fiador',
-        'Cobertura para aluguel e encargos',
+        'Análise simplificada e rápida',
         'Disponível para imóveis residenciais e comerciais',
         'Parcelamento do valor do seguro',
-        'Renovação facilitada do contrato'
+        'Proporciona maior segurança jurídica ao locador',
+        'Processo 100% online'
       ],
       benefits: [
-        'Processo de aprovação simplificado',
         'Não compromete seu limite de crédito',
-        'Cobertura ampla para diversos tipos de imóveis',
-        'Tranquilidade para inquilinos e proprietários',
-        'Não imobiliza seu capital como na caução'
+        'Não imobiliza seu capital como na caução',
+        'Facilita a aprovação do cadastro e a assinatura do contrato de aluguel',
+        'Ideal para quem precisa alugar com urgência',
+        'Em caso de sinistro, a seguradora paga ao proprietário e depois negocia diretamente com o inquilino inadimplente'
       ],
       icon: '/file.svg'
     },
@@ -130,10 +129,9 @@ export default function GarantiasPage() {
             <section className="py-16 bg-gray-100">
               <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">{service.title}</h2>
                   {showSteps && (
                     <>
-                      <h1 className="text-gray-700 text-xl mb-10 text-center font-bold">O que é seguro fiança locatícia e por que escolher essa garantia na hora de alugar um imóvel?</h1>
+                      <h1 className="text-gray-700 text-3xl mb-10 text-left font-bold">O que é seguro fiança locatícia e por que escolher essa garantia na hora de alugar um imóvel?</h1>
 
                       <p className="text-gray-600 text-lg mb-10 text-justify">
                         O <b>seguro fiança locatícia</b> é uma das melhores alternativas ao fiador tradicional ou ao depósito caução. Em vez de depender de terceiros, o inquilino contrata uma <b>seguradora</b>, que garante ao proprietário o pagamento do <b>aluguel e encargos mensais</b> — como condomínio, IPTU, água, luz e gás — em caso de inadimplência.
@@ -166,48 +164,199 @@ export default function GarantiasPage() {
                     </>
                   )}
 
-                  
-                  <div className="grid md:grid-cols-2 gap-8">
-                    {/* Features */}
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                        <svg className="w-6 h-6 text-[#1082a6] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                        Características
-                      </h3>
-                      <ul className="space-y-3">
-                        {service.features.map((feature, index) => (
-                          <li key={index} className="flex items-start">
-                            <svg className="w-5 h-5 text-[#1082a6] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span className="text-gray-600">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+
+                  {showStepsCap && ( 
+                    <>
+                       <h1 className="text-gray-700 text-3xl mt-10 mb-6 text-left font-bold">O que é o título de capitalização para locação?</h1>
+
+                        <p className="text-gray-600 text-lg mb-5 text-justify">
+                          O título de capitalização para aluguel é uma alternativa ao <b>depósito caução</b>. 
+                          Nele, o inquilino compra um título no valor combinado com a imobiliária 
+                          (geralmente entre 6 a 12 vezes o valor do aluguel) e esse valor fica <b>vinculado 
+                          como garantia ao contrato de locação.</b>
+                        </p>
+
+                        <p className="text-gray-600 text-lg mb-5 text-justify">
+                          Durante a vigência do contrato, o dinheiro fica administrado com a seguradora. Caso o inquilino não cumpra com suas obrigações — como pagamento de aluguel, encargos ou reparos 
+                          no imóvel —, o proprietário pode usar esse valor para cobrir os prejuízos.
+                          <br />
+                          <br />
+                          Se tudo correr bem, o inquilino pode <b>resgatar o valor 
+                          corrigido no final do contrato.</b>
+                        </p>
+
+                        <p className="text-gray-600 text-lg mb-10 text-justify">
+                          Se você está buscando uma forma segura e simples de <b>alugar um imóvel sem fiador</b>, 
+                          o <b>título de capitalização para locação</b> pode ser a solução ideal. 
+                          Essa modalidade de <b>garantia locatícia</b> vem ganhando destaque no mercado 
+                          por unir praticidade, segurança e a vantagem de poder <b>resgatar o valor 
+                          aplicado ao final do contrato.</b>
+                        </p>
+                    </>
+                  )}                  
+                  {!showStepsCap ? (
+                    <div className="grid md:grid-cols-2 gap-8">
+                      {/* Features */}
+                      <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                          <svg className="w-6 h-6 text-[#1082a6] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                          </svg>
+                          Características
+                        </h3>
+                        <ul className="space-y-3">
+                          {service.features.map((feature, index) => (
+                            <li key={index} className="flex items-start">
+                              <svg className="w-5 h-5 text-[#1082a6] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                              </svg>
+                              <span className="text-gray-600">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      {/* Benefits */}
+                      <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                          <svg className="w-6 h-6 text-[#1082a6] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                          </svg>
+                          Benefícios
+                        </h3>
+                        <ul className="space-y-3">
+                          {service.benefits.map((benefit, index) => (
+                            <li key={index} className="flex items-start">
+                              <svg className="w-5 h-5 text-[#1082a6] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                              </svg>
+                              <span className="text-gray-600">{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    
-                    {/* Benefits */}
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                        <svg className="w-6 h-6 text-[#1082a6] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                        Benefícios
-                      </h3>
-                      <ul className="space-y-3">
-                        {service.benefits.map((benefit, index) => (
-                          <li key={index} className="flex items-start">
-                            <svg className="w-5 h-5 text-[#1082a6] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  ) : (
+                    <div>                      {/* Layout estilo da imagem para Título de Capitalização */}                      <div className="grid md:grid-cols-3 gap-8 mb-10">
+                        {/* Sem análise de crédito */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-blue-100 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <span className="text-gray-600">{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Sem análise de crédito</h3>
+                          <p className="text-gray-600">Dispensa consulta a SPC e Serasa</p>
+                        </div>
+
+                        {/* Valor resgatável */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-orange-100 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Valor resgatável</h3>
+                          <p className="text-gray-600">Se não houver pendências, o inquilino recebe o valor de volta com correção</p>
+                        </div>
+
+                        {/* Valor livre de negociação */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-green-100 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14c-1.343 0-2.608.338-3.714.938" />
+                            </svg>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Valor livre de negociação</h3>
+                          <p className="text-gray-600">O valor é ajustado conforme negociação entre as partes</p>
+                        </div>
+
+                        {/* Facilidade e agilidade */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-blue-500 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                            </svg>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Facilidade e agilidade</h3>
+                          <p className="text-gray-600">Contratação simples e rápida, geralmente online</p>
+                        </div>
+
+                        {/* Garantia Real */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-blue-300 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Mais segurança para o locador</h3>
+                          <p className="text-gray-600">O valor já fica garantido desde o início do contrato</p>
+                        </div>
+
+                        {/* Sorteios mensais */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-blue-800 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                            </svg>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Sorteios mensais</h3>
+                          <p className="text-gray-600">Possibilidade de ganhar prêmios durante a vigência do contrato</p>
+                        </div>                        {/* Sem comprovação de renda */}
+                        <div className="flex flex-col items-center text-center col-span-1 md:col-start-2 md:col-end-3 mx-auto">
+                          <div className="bg-purple-100 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              <line x1="9" y1="10" x2="15" y2="10" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} transform="rotate(45,12,10)" />
+                            </svg>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Sem comprovação de renda</h3>
+                          <p className="text-gray-600">Não é necessário apresentar holerites ou declaração de imposto de renda</p>
+                        </div>
+                      </div>                     
+                      
+                      <h3 className="text-2xl font-bold text-gray-800 my-8 text-center">Ideal Para</h3>
+
+                      <div className="grid gap-8">
+                        {/* Primeira linha - 3 colunas */}
+                        <div className="grid md:grid-cols-3 gap-8">
+                          {/* Inquilinos com urgência */}
+                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <h4 className="font-semibold text-gray-800 mb-2">Inquilinos com urgência para alugar</h4>
+                            <p className="text-gray-600">Processo rápido e simplificado para quem precisa fechar contrato com agilidade</p>
+                          </div>
+
+                          {/* Locações comerciais e residenciais */}
+                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <h4 className="font-semibold text-gray-800 mb-2">Para locações comerciais e residenciais</h4>
+                            <p className="text-gray-600">Solução versátil que atende diferentes tipos de imóveis e necessidades</p>
+                          </div>
+
+                          {/* Quem tem nome negativado */}
+                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <h4 className="font-semibold text-gray-800 mb-2">Quem tem nome negativado</h4>
+                            <p className="text-gray-600">Alternativa para pessoas com restrições no nome que não conseguiriam aprovação em outras garantias</p>
+                          </div>
+                        </div>
+                        
+                        {/* Segunda linha - 2 colunas (ocupando todo o espaço) */}
+                        <div className="grid md:grid-cols-2 gap-8">
+                          {/* Sem fiadores */}
+                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <h4 className="font-semibold text-gray-800 mb-2">Pessoas que não querem comprometer fiadores</h4>
+                            <p className="text-gray-600">Solução independente que não exige envolver terceiros na transação</p>
+                          </div>
+
+                          {/* Quem busca reembolso */}
+                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                            <h4 className="font-semibold text-gray-800 mb-2">Quem busca possibilidade de reembolso</h4>
+                            <p className="text-gray-600">Para inquilinos que valorizam o retorno do valor investido ao final do contrato</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>                    {showSteps && (
+                  )}{showSteps && (
                         <div className="mt-16">
                           <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Passo a Passo para Contratação</h3>
                             {/* Sistema de Abas */}
@@ -247,6 +396,7 @@ export default function GarantiasPage() {
                                     </p>
                                     <ul className='text-left w-full text-gray-700 list-disc mb-6 ml-25'>
                                       <li>Qual o valor do aluguel e encargos da locação (condomínio e IPTU)</li>
+                                      <li>Qual o prazo da locação?</li>
                                       <li>O imóvel é residencial ou comercial?</li>
                                       <li>Dados pessoais (nome, CPF, endereço, contato...) para a ficha cadastral.</li>
                                     </ul>
@@ -254,7 +404,7 @@ export default function GarantiasPage() {
                                       Estas informações são de suma importância para que a seguradora possa precificar o seguro.
                                       <br />
                                       <br />
-                                      O <b>valor do prêmio do seguro</b> (geralmente entre <b>1 a 2,5 vezes o valor do aluguel</b> por ano, podendo ser parcelado).
+                                      O <b>valor do prêmio do seguro</b> (geralmente entre <b>1 a 2 vezes o valor do aluguel</b> por ano, podendo ser parcelado).
                                     </p>
                                   </div>
                                 </div>
@@ -344,9 +494,42 @@ export default function GarantiasPage() {
                               )}
                             </div>
                           </div>
-                          
-                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            
+                            <div className="mt-12">
+                            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">Serviços</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                              {/* Assistência 24 horas */}
+                              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                                <div className="flex items-center mb-4">
+                                  <span className="text-yellow-400 mr-2">★</span>
+                                  <h4 className="text-xl font-semibold text-gray-800">Assistência 24 horas</h4>
+                                </div>
+                                <p className="text-gray-600">
+                                  Suporte disponível a qualquer momento para emergências relacionadas ao imóvel, garantindo tranquilidade e resolução rápida de problemas.
+                                </p>
+                              </div>
+                              
+                              {/* Pagamento do aluguel com cartão de crédito */}
+                              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                                <div className="flex items-center mb-4">
+                                  <span className="text-yellow-400 mr-2">★</span>
+                                  <h4 className="text-xl font-semibold text-gray-800">Pagamento do aluguel com cartão de crédito</h4>
+                                </div>
+                                <p className="text-gray-600">
+                                  Flexibilidade para o inquilino realizar o pagamento do aluguel utilizando cartão de crédito, facilitando a gestão financeira mensal.
+                                </p>
+                              </div>
+                              
+                              {/* Assistência jurídica para o proprietário */}
+                              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                                <div className="flex items-center mb-4">
+                                  <span className="text-yellow-400 mr-2">★</span>
+                                  <h4 className="text-xl font-semibold text-gray-800">Assistência jurídica para o proprietário</h4>
+                                </div>
+                                <p className="text-gray-600">
+                                  Consultoria e orientação legal especializada para proprietários, proporcionando segurança nas questões legais relacionadas ao contrato de locação.
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       )}
