@@ -166,7 +166,8 @@ export default function GarantiasPage() {
 
 
                   {showStepsCap && ( 
-                    <>                       <div className="flex flex-col md:flex-row gap-8 mb-10">
+                    <>                       
+                    <div className="flex flex-col md:flex-row gap-8 mb-10">
                          <div className="md:w-2/5">
                            <h1 className="text-gray-700 w-120 text-5xl leading-normal mb-6 text-left font-bold">O que é o título de capitalização para locação?</h1>
                          </div>
@@ -242,7 +243,15 @@ export default function GarantiasPage() {
                       </div>
                     </div>
                   ) : (
-                    <div>                      {/* Layout estilo da imagem para Título de Capitalização */}                      <div className="grid md:grid-cols-3 gap-8 mb-10">
+                    <div>  
+                      <div className='flex items-center justify-center mt-13 mb-13'>
+                        <svg className="w-8 h-8 text-[#1082a6] mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <h1 className="text-gray-700 w-full text-4xl leading-normal  text-left font-bold">Vantagens</h1>
+                      </div>
+                                          {/* Layout estilo da imagem para Título de Capitalização */}                        
+                      <div className="grid md:grid-cols-3 gap-15 mb-10">
                         {/* Sem análise de crédito */}
                         <div className="flex flex-col items-center text-center">
                           <div className="bg-blue-100 p-3 rounded-full mb-4 inline-flex">
@@ -274,7 +283,7 @@ export default function GarantiasPage() {
                             </svg>
                           </div>
                           <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Valor livre de negociação</h3>
-                          <p className="text-gray-600">O valor é ajustado conforme negociação entre as partes</p>
+                          <p className="text-gray-600">O valor é ajustado conforme solicitado pelo proprietário e aceito pelo locatário</p>
                         </div>
 
                         {/* Facilidade e agilidade */}
@@ -288,6 +297,17 @@ export default function GarantiasPage() {
                           <p className="text-gray-600">Contratação simples e rápida, geralmente online</p>
                         </div>
 
+                        {/* Pagamento facilitado - NOVO */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-yellow-100 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                            </svg>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Pagamento facilitado</h3>
+                          <p className="text-gray-600">Boleto, cartão de crédito em até 18x e PIX</p>
+                        </div>
+
                         {/* Garantia Real */}
                         <div className="flex flex-col items-center text-center">
                           <div className="bg-blue-300 p-3 rounded-full mb-4 inline-flex">
@@ -299,6 +319,17 @@ export default function GarantiasPage() {
                           <p className="text-gray-600">O valor já fica garantido desde o início do contrato</p>
                         </div>
 
+                        {/* Assistência 24 horas - NOVO */}
+                        <div className="flex flex-col items-center text-center">
+                          <div className="bg-red-100 p-3 rounded-full mb-4 inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                          </div>
+                          <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Assistência 24 horas</h3>
+                          <p className="text-gray-600">Serviços de assistência residencial para o inquilino</p>
+                        </div>
+
                         {/* Sorteios mensais */}
                         <div className="flex flex-col items-center text-center">
                           <div className="bg-blue-800 p-3 rounded-full mb-4 inline-flex">
@@ -307,9 +338,11 @@ export default function GarantiasPage() {
                             </svg>
                           </div>
                           <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Sorteios mensais</h3>
-                          <p className="text-gray-600">Possibilidade de ganhar prêmios durante a vigência do contrato</p>
-                        </div>                        {/* Sem comprovação de renda */}
-                        <div className="flex flex-col items-center text-center col-span-1 md:col-start-2 md:col-end-3 mx-auto">
+                          <p className="text-gray-600">Com o título o inquilino concorre a sorteios mensais pela loteria federal</p>
+                        </div>
+
+                        {/* Sem comprovação de renda */}
+                        <div className="flex flex-col items-center text-center">
                           <div className="bg-purple-100 p-3 rounded-full mb-4 inline-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -319,45 +352,94 @@ export default function GarantiasPage() {
                           <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Sem comprovação de renda</h3>
                           <p className="text-gray-600">Não é necessário apresentar holerites ou declaração de imposto de renda</p>
                         </div>
-                      </div>                     
-                      
-                      <h3 className="text-2xl font-bold text-gray-800 my-8 text-center">Ideal Para</h3>
+                      </div>
 
-                      <div className="grid gap-8">
-                        {/* Primeira linha - 3 colunas */}
-                        <div className="grid md:grid-cols-3 gap-8">
-                          {/* Inquilinos com urgência */}
-                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <h4 className="font-semibold text-gray-800 mb-2">Inquilinos com urgência para alugar</h4>
-                            <p className="text-gray-600">Processo rápido e simplificado para quem precisa fechar contrato com agilidade</p>
-                          </div>
+                      <h1 className="text-gray-700 w-full text-4xl mt-8 mb-15 leading-normal text-left font-bold">📌 Indicado Para</h1>
 
-                          {/* Locações comerciais e residenciais */}
-                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <h4 className="font-semibold text-gray-800 mb-2">Para locações comerciais e residenciais</h4>
-                            <p className="text-gray-600">Solução versátil que atende diferentes tipos de imóveis e necessidades</p>
-                          </div>
+                      <div className="flex flex-col md:flex-row gap-8">
+                        {/* Coluna da Esquerda - 3 itens */}
+                        <div className="md:w-1/2">
+                          <ul className="space-y-6">
+                            {/* Item 1 */}
+                            <li className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                              <div className="flex items-start">
+                                <div className="bg-blue-100 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 className="font-semibold text-gray-800 mb-2">Inquilinos com urgência para alugar</h4>
+                                  <p className="text-gray-600">Processo rápido e simplificado para quem precisa fechar contrato com agilidade</p>
+                                </div>
+                              </div>
+                            </li>
 
-                          {/* Quem tem nome negativado */}
-                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <h4 className="font-semibold text-gray-800 mb-2">Quem tem nome negativado</h4>
-                            <p className="text-gray-600">Alternativa para pessoas com restrições no nome que não conseguiriam aprovação em outras garantias</p>
-                          </div>
+                            {/* Item 2 */}
+                            <li className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                              <div className="flex items-start">
+                                <div className="bg-blue-100 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 className="font-semibold text-gray-800 mb-2">Para locações comerciais e residenciais</h4>
+                                  <p className="text-gray-600">Solução versátil que atende diferentes tipos de imóveis e necessidades</p>
+                                </div>
+                              </div>
+                            </li>
+
+                            {/* Item 3 */}
+                            <li className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                              <div className="flex items-start">
+                                <div className="bg-blue-100 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 className="font-semibold text-gray-800 mb-2">Quem tem nome negativado</h4>
+                                  <p className="text-gray-600">Alternativa para pessoas com restrições no nome que não conseguiriam aprovação em outras garantias</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
                         </div>
                         
-                        {/* Segunda linha - 2 colunas (ocupando todo o espaço) */}
-                        <div className="grid md:grid-cols-2 gap-8">
-                          {/* Sem fiadores */}
-                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <h4 className="font-semibold text-gray-800 mb-2">Pessoas que não querem comprometer fiadores</h4>
-                            <p className="text-gray-600">Solução independente que não exige envolver terceiros na transação</p>
-                          </div>
+                        {/* Coluna da Direita - 2 itens */}
+                        <div className="md:w-1/2">
+                          <ul className="space-y-6">
+                            {/* Item 4 */}
+                            <li className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                              <div className="flex items-start">
+                                <div className="bg-blue-100 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 className="font-semibold text-gray-800 mb-2">Pessoas que não querem comprometer fiadores</h4>
+                                  <p className="text-gray-600">Solução independente que não exige envolver terceiros na transação</p>
+                                </div>
+                              </div>
+                            </li>
 
-                          {/* Quem busca reembolso */}
-                          <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-                            <h4 className="font-semibold text-gray-800 mb-2">Quem busca possibilidade de reembolso</h4>
-                            <p className="text-gray-600">Para inquilinos que valorizam o retorno do valor investido ao final do contrato</p>
-                          </div>
+                            {/* Item 5 */}
+                            <li className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                              <div className="flex items-start">
+                                <div className="bg-blue-100 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <div>
+                                  <h4 className="font-semibold text-gray-800 mb-2">Quem busca possibilidade de reembolso</h4>
+                                  <p className="text-gray-600">Para inquilinos que valorizam o retorno do valor investido ao final do contrato</p>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
