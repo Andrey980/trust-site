@@ -128,7 +128,7 @@ export default function GarantiasPage() {
           <div key={service.id}>
             <section className="py-16 bg-gray-100">
               <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w mx-auto">
                   {showSteps && (
                     <>
                       <h1 className="text-gray-700 text-3xl mb-10 text-left font-bold">O que é seguro fiança locatícia e por que escolher essa garantia na hora de alugar um imóvel?</h1>
@@ -166,32 +166,37 @@ export default function GarantiasPage() {
 
 
                   {showStepsCap && ( 
-                    <>
-                       <h1 className="text-gray-700 text-3xl mt-10 mb-6 text-left font-bold">O que é o título de capitalização para locação?</h1>
-
-                        <p className="text-gray-600 text-lg mb-5 text-justify">
-                          O título de capitalização para aluguel é uma alternativa ao <b>depósito caução</b>. 
-                          Nele, o inquilino compra um título no valor combinado com a imobiliária 
-                          (geralmente entre 6 a 12 vezes o valor do aluguel) e esse valor fica <b>vinculado 
-                          como garantia ao contrato de locação.</b>
-                        </p>
-
-                        <p className="text-gray-600 text-lg mb-5 text-justify">
-                          Durante a vigência do contrato, o dinheiro fica administrado com a seguradora. Caso o inquilino não cumpra com suas obrigações — como pagamento de aluguel, encargos ou reparos 
-                          no imóvel —, o proprietário pode usar esse valor para cobrir os prejuízos.
-                          <br />
-                          <br />
-                          Se tudo correr bem, o inquilino pode <b>resgatar o valor 
-                          corrigido no final do contrato.</b>
-                        </p>
-
-                        <p className="text-gray-600 text-lg mb-10 text-justify">
-                          Se você está buscando uma forma segura e simples de <b>alugar um imóvel sem fiador</b>, 
-                          o <b>título de capitalização para locação</b> pode ser a solução ideal. 
-                          Essa modalidade de <b>garantia locatícia</b> vem ganhando destaque no mercado 
-                          por unir praticidade, segurança e a vantagem de poder <b>resgatar o valor 
-                          aplicado ao final do contrato.</b>
-                        </p>
+                    <>                       <div className="flex flex-col md:flex-row gap-8 mb-10">
+                         <div className="md:w-2/5">
+                           <h1 className="text-gray-700 w-120 text-5xl leading-normal mb-6 text-left font-bold">O que é o título de capitalização para locação?</h1>
+                         </div>
+                         <div className="md:w-3/5">
+                           <p className="text-gray-600 text-lg mb-5 text-justify">
+                             O título de capitalização para aluguel é uma alternativa ao <b>depósito caução</b>. 
+                             Nele, o inquilino compra um título no valor combinado com a imobiliária 
+                             (geralmente entre 6 a 12 vezes o valor do aluguel) e esse valor fica <b>vinculado 
+                             como garantia ao contrato de locação.</b>
+                           </p>
+                           
+                           <p className="text-gray-600 text-lg mb-5 text-justify">
+                             Durante a vigência do contrato, o dinheiro fica administrado com a seguradora. Caso o inquilino não cumpra com suas obrigações — como pagamento de aluguel, encargos ou reparos 
+                             no imóvel —, o proprietário pode usar esse valor para cobrir os prejuízos.
+                           </p>
+                           
+                           <p className="text-gray-600 text-lg mb-5 text-justify">
+                             Se tudo correr bem, o inquilino pode <b>resgatar o valor 
+                             corrigido no final do contrato.</b>
+                           </p>
+                         </div>
+                       </div>
+                       
+                       <p className="text-gray-600 text-lg mb-10 text-justify">
+                         Se você está buscando uma forma segura e simples de <b>alugar um imóvel sem fiador</b>, 
+                         o <b>título de capitalização para locação</b> pode ser a solução ideal. 
+                         Essa modalidade de <b>garantia locatícia</b> vem ganhando destaque no mercado 
+                         por unir praticidade, segurança e a vantagem de poder <b>resgatar o valor 
+                         aplicado ao final do contrato.</b>
+                       </p>
                     </>
                   )}                  
                   {!showStepsCap ? (
