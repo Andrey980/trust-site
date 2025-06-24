@@ -131,22 +131,26 @@ export default function GarantiasPage() {
                 <div className="max-w mx-auto">
                   {showSteps && (
                     <>
-                      <h1 className="text-gray-700 text-3xl mb-10 text-left font-bold">O que é seguro fiança locatícia e por que escolher essa garantia na hora de alugar um imóvel?</h1>
+                      <div className="flex flex-col md:flex-row gap-8 mb-10">
+                           <div className="md:w-2/5 border-r border-gray-400">
+                              <h1 className="text-gray-700 w-120 text-5xl leading-normal mb-6 text-left font-bold">O que é seguro fiança e por que escolher essa garantia?</h1>
+                            </div>
 
-                      <p className="text-gray-600 text-lg mb-10 text-justify">
-                        O <b>seguro fiança locatícia</b> é uma das melhores alternativas ao fiador tradicional ou ao depósito caução. Em vez de depender de terceiros, o inquilino contrata uma <b>seguradora</b>, que garante ao proprietário o pagamento do <b>aluguel e encargos mensais</b> — como condomínio, IPTU, água, luz e gás — em caso de inadimplência.
-                        <br />
-                        <br />
+                            <p className="text-gray-600 text-lg mb-10 text-justify leading-loose">
+                              O <b>seguro fiança locatícia</b> é uma das melhores alternativas ao fiador tradicional ou ao depósito caução. Em vez de depender de terceiros, o inquilino contrata uma <b>seguradora</b>, que garante ao proprietário o pagamento do <b>aluguel e encargos mensais</b> — como condomínio, IPTU, água, luz e gás — em caso de inadimplência.
+                              <br />
+                              <br />
 
-                        Essa modalidade de garantia locatícia é a <b>única no mercado que assegura ao proprietário o recebimento integral do aluguel durante todo o período do contrato de locação</b>, oferecendo mais segurança e tranquilidade para ambas as partes.
-                        <br />
-                        <br />
-
+                              Essa modalidade de garantia locatícia é a <b>única no mercado que assegura ao proprietário o recebimento integral do aluguel durante todo o período do contrato de locação</b>, oferecendo mais segurança e tranquilidade para ambas as partes.
+                            </p>
+                      </div>
+                      
+                      <p className="text-gray-600 text-lg mb-6 text-justify">
                         Se você está procurando uma forma <b>segura e prática de alugar um imóvel sem fiador</b>, o seguro fiança pode ser a solução ideal.
                       </p>
 
-                      <h1 className="text-gray-700 text-xl mb-10 text-center font-bold">O que o seguro pode cobrir?</h1>
-
+                      <h1 className="text-gray-700 w-full text-4xl leading-normal text-left mb-7 font-bold">O que o seguro pode cobrir?</h1>
+                      
                       <p className='text-gray-700 w-full text-lg mb-6 text-left'>
                         Além do aluguel, o seguro pode incluir:
                       </p>
@@ -160,7 +164,6 @@ export default function GarantiasPage() {
                         <li>Pintura externa</li>
                         <li>Multa por quebra de contrato</li>
                       </ul>
-
                     </>
                   )}
 
@@ -168,7 +171,7 @@ export default function GarantiasPage() {
                   {showStepsCap && ( 
                     <>                       
                     <div className="flex flex-col md:flex-row gap-8 mb-10">
-                         <div className="md:w-2/5">
+                         <div className="md:w-2/5 border-r border-gray-400">
                            <h1 className="text-gray-700 w-120 text-5xl leading-normal mb-6 text-left font-bold">O que é o título de capitalização para locação?</h1>
                          </div>
                          <div className="md:w-3/5">
@@ -294,7 +297,7 @@ export default function GarantiasPage() {
                             </svg>
                           </div>
                           <h3 className="text-xl font-semibold text-[#ff6b35] mb-3">Facilidade e agilidade</h3>
-                          <p className="text-gray-600">Contratação simples e rápida, geralmente online</p>
+                          <p className="text-gray-600">Contratação simples e rápida</p>
                         </div>
 
                         {/* Pagamento facilitado - NOVO */}
