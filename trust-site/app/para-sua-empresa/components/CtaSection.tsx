@@ -15,7 +15,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({ title, subtitle, buttonText }) 
           <p className="text-white/80 max-w-2xl mx-auto mb-8">
             {subtitle}
           </p>
-          <button className="bg-white text-[#1082a6] hover:bg-gray-100 px-8 py-3 rounded font-semibold shadow-lg transition-all duration-300">
+          <button className="bg-white text-[#1082a6] cursor-pointer hover:bg-gray-100 px-8 py-3 rounded font-semibold shadow-lg transition-all duration-300">
             {buttonText}
           </button>
         </div>

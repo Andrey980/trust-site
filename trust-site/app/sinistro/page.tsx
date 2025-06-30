@@ -15,7 +15,7 @@ export default function AtendimentoPage() {
           {/* Sobreposição de imagem com opacidade */}
           <div className="absolute inset-0">
             <img 
-              src="/img/hero-home.png" 
+              src="/img/atendimento.png" 
               alt="Fundo do banner" 
               className="w-full h-full object-cover"
             />
@@ -58,7 +58,7 @@ export default function AtendimentoPage() {
               {/* Card 1 */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">                <div className="bg-[#0d7592] p-4">
                   <h3 className="text-xl font-semibold text-white">Sinistros</h3>
-                </div>
+                </div> kkaksdka 
                 <div className="p-6">
                   <p className="text-gray-600 mb-4">
                     Comunique um sinistro, acompanhe o andamento ou tire dúvidas sobre seu processo.
@@ -75,7 +75,8 @@ export default function AtendimentoPage() {
                 <div className="p-6">
                   <p className="text-gray-600 mb-4">
                     Solicite alterações em sua apólice ou em seus dados cadastrais.
-                  </p>                  <a href="#" className="text-[#0d7592] font-medium hover:underline">
+                  </p>                  
+                  <a href="#" className="text-[#0d7592] font-medium hover:underline">
                     Solicitar alteração →
                   </a>
                 </div>
@@ -93,7 +94,6 @@ export default function AtendimentoPage() {
                   </a>
                 </div>
               </div>
-              
               {/* Card 4 */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">                <div className="bg-[#0d7592] p-4">
                   <h3 className="text-xl font-semibold text-white">Segunda via</h3>

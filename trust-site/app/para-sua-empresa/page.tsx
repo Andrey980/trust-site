@@ -333,7 +333,7 @@ export default function ParaSuaEmpresaPage() {
       <CtaSection 
         title="Quer fortalecer a segurança do seu negócio?" 
         subtitle="Fale com nossos consultores empresariais e descubra soluções personalizadas para sua empresa"
-        buttonText="Solicitar Consultoria"
+        buttonText="Solicitar Cotação"
       />
       <FaqSection faqs={faqs} />
       <WhatsappButton />
