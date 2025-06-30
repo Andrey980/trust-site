@@ -1,6 +1,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
+import Image from 'next/image';
 
 export default function AtendimentoPage() {
   return (
@@ -14,10 +15,12 @@ export default function AtendimentoPage() {
           <section className="relative bg-transparent text-white overflow-hidden rounded-lg shadow-lg">
           {/* Sobreposição de imagem com opacidade */}
           <div className="absolute inset-0">
-            <img 
+            <Image 
               src="/img/atendimento.png" 
               alt="Fundo do banner" 
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              priority
             />
             <div className="absolute inset-0 bg-[#0d7592] opacity-80"></div>
           </div>

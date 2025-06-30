@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
-import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ParceiroPage() {
   return (
@@ -16,10 +16,12 @@ export default function ParceiroPage() {
           <section className="relative bg-transparent text-white overflow-hidden rounded-lg shadow-lg">
             {/* Sobreposição de imagem com opacidade */}
             <div className="absolute inset-0">
-              <img 
+              <Image 
                 src="/img/parceria-2.png" 
                 alt="Fundo do banner" 
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                priority
               />
               <div className="absolute inset-0 bg-[#1082a6] opacity-70"></div>
             </div>
