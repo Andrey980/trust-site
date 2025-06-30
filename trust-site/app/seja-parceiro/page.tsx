@@ -64,8 +64,48 @@ export default function ParceiroPage() {
       </section>
 
       {/* Submenu de navegação - cores corrigidas */}
-      <section className="py-8 bg-gray-100 shadow-lg">
-        <div className="container mx-auto px-4">
+      <section className="py-8 bg-gray-100 shadow-lg relative overflow-hidden">
+        {/* Efeitos decorativos de fundo - versão profissional */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Gradiente sutil de profundidade */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-gray-150 opacity-30"></div>
+          
+          {/* Linhas geométricas profissionais */}
+          <svg className="absolute top-0 left-0 w-full h-full opacity-5" viewBox="0 0 1200 100">
+            <defs>
+              <pattern id="professionalGrid" patternUnits="userSpaceOnUse" width="40" height="40">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1082a6" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#professionalGrid)"/>
+          </svg>
+          
+          {/* Elementos geométricos minimalistas */}
+          <div className="absolute top-3 left-8 w-1 h-8 bg-[#1082a6] opacity-20"></div>
+          <div className="absolute top-3 right-8 w-1 h-8 bg-[#1082a6] opacity-20"></div>
+          <div className="absolute bottom-3 left-1/4 w-12 h-1 bg-[#1082a6] opacity-15"></div>
+          <div className="absolute bottom-3 right-1/4 w-12 h-1 bg-[#1082a6] opacity-15"></div>
+          
+          {/* Hexágonos sutis para representar proteção/segurança */}
+          <svg className="absolute top-2 right-20 w-6 h-6 opacity-10" viewBox="0 0 24 24">
+            <path d="M6.5 2L17.5 2L23 12L17.5 22L6.5 22L1 12Z" fill="none" stroke="#1082a6" strokeWidth="1"/>
+          </svg>
+          <svg className="absolute bottom-2 left-16 w-5 h-5 opacity-15" viewBox="0 0 24 24">
+            <path d="M6.5 2L17.5 2L23 12L17.5 22L6.5 22L1 12Z" fill="none" stroke="#1082a6" strokeWidth="1"/>
+          </svg>
+          
+          {/* Bordas sutis para dar estrutura */}
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#1082a6] to-transparent opacity-20"></div>
+          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#1082a6] to-transparent opacity-20"></div>
+          
+          {/* Elementos de canto discretos */}
+          <div className="absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[#1082a6] opacity-25"></div>
+          <div className="absolute top-0 right-0 w-3 h-3 border-r-2 border-t-2 border-[#1082a6] opacity-25"></div>
+          <div className="absolute bottom-0 left-0 w-3 h-3 border-l-2 border-b-2 border-[#1082a6] opacity-25"></div>
+          <div className="absolute bottom-0 right-0 w-3 h-3 border-r-2 border-b-2 border-[#1082a6] opacity-25"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#administrador" className="px-6 py-3 bg-[#1082a6] hover:bg-[#0a6b8a] text-white rounded-md transition-colors font-medium">
               Administrador
@@ -256,8 +296,49 @@ export default function ParceiroPage() {
       </section>
       
       {/* Seção CTA - cores corrigidas */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gray-100 relative overflow-hidden">
+        {/* Efeitos decorativos de fundo */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Bolinhas grandes */}
+          <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#1082a6] opacity-10 rounded-full"></div>
+          <div className="absolute top-20 right-16 w-24 h-24 bg-[#ff6b35] opacity-15 rounded-full"></div>
+          <div className="absolute -bottom-8 left-1/4 w-20 h-20 bg-[#1082a6] opacity-20 rounded-full"></div>
+          <div className="absolute bottom-10 -right-6 w-28 h-28 bg-[#ff6b35] opacity-10 rounded-full"></div>
+          
+          {/* Bolinhas médias */}
+          <div className="absolute top-1/3 left-12 w-16 h-16 bg-[#1082a6] opacity-15 rounded-full"></div>
+          <div className="absolute top-1/2 right-1/3 w-14 h-14 bg-[#ff6b35] opacity-20 rounded-full"></div>
+          <div className="absolute bottom-1/4 left-1/2 w-12 h-12 bg-[#1082a6] opacity-25 rounded-full"></div>
+          
+          {/* Bolinhas pequenas */}
+          <div className="absolute top-16 left-1/3 w-8 h-8 bg-[#ff6b35] opacity-30 rounded-full"></div>
+          <div className="absolute top-3/4 right-20 w-6 h-6 bg-[#1082a6] opacity-35 rounded-full"></div>
+          <div className="absolute bottom-20 left-20 w-10 h-10 bg-[#ff6b35] opacity-25 rounded-full"></div>
+          <div className="absolute top-2/3 left-2/3 w-4 h-4 bg-[#1082a6] opacity-40 rounded-full"></div>
+          
+          {/* Padrão de pontos SVG */}
+          <svg className="absolute top-10 right-10 w-20 h-20 opacity-20" viewBox="0 0 100 100">
+            <circle cx="20" cy="20" r="3" fill="#1082a6"/>
+            <circle cx="50" cy="20" r="2" fill="#ff6b35"/>
+            <circle cx="80" cy="20" r="3" fill="#1082a6"/>
+            <circle cx="20" cy="50" r="2" fill="#ff6b35"/>
+            <circle cx="50" cy="50" r="3" fill="#1082a6"/>
+            <circle cx="80" cy="50" r="2" fill="#ff6b35"/>
+            <circle cx="20" cy="80" r="3" fill="#1082a6"/>
+            <circle cx="50" cy="80" r="2" fill="#ff6b35"/>
+            <circle cx="80" cy="80" r="3" fill="#1082a6"/>
+          </svg>
+          
+          <svg className="absolute bottom-16 left-16 w-16 h-16 opacity-15" viewBox="0 0 100 100">
+            <circle cx="25" cy="25" r="4" fill="#ff6b35"/>
+            <circle cx="75" cy="25" r="3" fill="#1082a6"/>
+            <circle cx="25" cy="75" r="3" fill="#1082a6"/>
+            <circle cx="75" cy="75" r="4" fill="#ff6b35"/>
+            <circle cx="50" cy="50" r="5" fill="#1082a6"/>
+          </svg>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
               Pronto para potencializar seus resultados?

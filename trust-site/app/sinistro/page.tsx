@@ -59,9 +59,10 @@ export default function AtendimentoPage() {
             {/* Cards de serviços */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
               {/* Card 1 */}
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">                <div className="bg-[#0d7592] p-4">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">              
+                <div className="bg-[#0d7592] p-4">
                   <h3 className="text-xl font-semibold text-white">Sinistros</h3>
-                </div> kkaksdka 
+                </div>
                 <div className="p-6">
                   <p className="text-gray-600 mb-4">
                     Comunique um sinistro, acompanhe o andamento ou tire dúvidas sobre seu processo.
