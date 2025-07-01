@@ -1,6 +1,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
+import ScrollToTop from '../components/ScrollToTop';
 // import Image from 'next/image';
 
 export default function SobrePage() {
@@ -400,17 +401,18 @@ export default function SobrePage() {
       </section>
 
       {/* Depoimentos e Testemunhos */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gradient-to-r from-[#1082a6] to-[#0a6b8a] relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">O que Dizem Nossos Clientes</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">O que Dizem Nossos Clientes</h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Depoimentos reais de quem confia na Trust para proteger o que mais importa
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-lg relative">
+            <div className="bg-white/95 p-8 rounded-lg relative backdrop-blur-sm">
               <div className="absolute top-4 left-4 text-[#1082a6] text-4xl">&ldquo;</div>
               <div className="mt-8">
                 <p className="text-gray-600 mb-6 italic">
@@ -428,7 +430,7 @@ export default function SobrePage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg relative">
+            <div className="bg-white/95 p-8 rounded-lg relative backdrop-blur-sm">
               <div className="absolute top-4 left-4 text-[#ff6b35] text-4xl">&ldquo;</div>
               <div className="mt-8">
                 <p className="text-gray-600 mb-6 italic">
@@ -446,7 +448,7 @@ export default function SobrePage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-lg relative">
+            <div className="bg-white/95 p-8 rounded-lg relative backdrop-blur-sm">
               <div className="absolute top-4 left-4 text-[#1082a6] text-4xl">&ldquo;</div>
               <div className="mt-8">
                 <p className="text-gray-600 mb-6 italic">
@@ -465,37 +467,54 @@ export default function SobrePage() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* CTA Final */}
-      <section className="py-16 bg-gradient-to-r from-[#1082a6] to-[#0a6b8a] relative overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Faça Parte da Família Trust
-            </h2>
-            <p className="text-xl mb-8">
-              Descubra como podemos proteger você, sua família e seu patrimônio com as melhores soluções em seguros
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#ff6b35] hover:bg-[#e55529] text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Solicitar Cotação
-              </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-[#1082a6] px-8 py-3 rounded-lg font-semibold transition-colors">
-                Falar com Consultor
-              </button>
-            </div>
-          </div>
-        </div>
         {/* Elementos decorativos */}
         <div className="absolute top-10 left-10 w-32 h-32 border border-white opacity-10 rounded-full"></div>
         <div className="absolute bottom-10 right-10 w-24 h-24 border border-white opacity-10 rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-white opacity-5 rounded-full"></div>
       </section>
 
+      {/* CTA Final */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 via-blue-50/30 to-white relative overflow-hidden">
+        {/* Padrão geométrico de fundo */}
+        <div className="absolute inset-0">
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+              Faça Parte da Família Trust
+            </h2>
+            <p className="text-xl mb-8 text-gray-600">
+              Descubra como podemos proteger você, sua família e seu patrimônio com as melhores soluções em seguros
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-[#1082a6] hover:bg-[#0a6b8a] text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
+                Solicitar Cotação
+              </button>
+              <button className="border-2 border-[#1082a6] text-[#1082a6] hover:bg-[#1082a6] hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
+                Falar com Consultor
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Elementos decorativos adicionais */}
+        <div className="absolute top-16 left-16 w-4 h-4 bg-[#1082a6] opacity-30 rounded-full"></div>
+        <div className="absolute top-32 left-48 w-3 h-3 bg-[#1082a6] opacity-25 rounded-full"></div>
+        <div className="absolute bottom-20 right-32 w-5 h-5 bg-[#1082a6] opacity-20 rounded-full"></div>
+        <div className="absolute bottom-40 right-56 w-3 h-3 bg-[#1082a6] opacity-30 rounded-full"></div>
+        <div className="absolute top-1/3 right-16 w-4 h-4 bg-[#1082a6] opacity-25 rounded-full"></div>
+        <div className="absolute top-2/3 left-24 w-2 h-2 bg-[#1082a6] opacity-35 rounded-full"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-3 h-3 bg-[#1082a6] opacity-20 rounded-full"></div>
+        
+        {/* Elementos geométricos adicionais */}
+        <div className="absolute top-20 right-1/4 w-6 h-6 border-2 border-[#1082a6] opacity-20 rotate-45"></div>
+        <div className="absolute bottom-24 left-1/4 w-8 h-8 border border-[#1082a6] opacity-15 rounded-full"></div>
+      </section>
+
       <Footer />
       <WhatsappButton />
+      <ScrollToTop />
     </main>
   );
 }
