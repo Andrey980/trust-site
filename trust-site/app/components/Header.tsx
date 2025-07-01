@@ -21,9 +21,9 @@ const menuLinks: MenuItem[] = [
     href: '/para-voce', 
     label: 'Para Você',
     submenu: [
-      { href: '/auto', label: 'Auto' },
-      { href: '/bike', label: 'Bike' },
-      { href: '/celular', label: 'Celular' },
+      { href: '/para-voce/#auto', label: 'Auto' },
+      { href: '/para-voce/#bike', label: 'Bike' },
+      { href: '/para-voce/#celular', label: 'Celular' },
       { href: '/consorcio', label: 'Consórcio' },
       { href: '/portateis', label: 'Equipamentos Portáteis' },
       { href: '/odonto', label: 'Odontológico' },
@@ -112,7 +112,7 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
         )}
       </Link>
       
-      {item.submenu && isHovered && (
+      {/* {item.submenu && isHovered && (
         <div className="absolute left-0 top-26 pt-2 z-50 bg-[#1082a6]">
           <div className="bg-white shadow-lg min-w-[100px] border">
             {item.submenu.map((subItem: SubMenuItem) => (
@@ -126,7 +126,7 @@ const MenuItem = ({ item, isActive }: MenuItemProps) => {
             ))}
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

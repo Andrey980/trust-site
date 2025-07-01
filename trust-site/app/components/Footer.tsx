@@ -69,85 +69,132 @@ const footerLinks = {
 
 export default function Footer() {
 	return (
-		<footer className="w-full bg-[#1082a6] pt-16 pb-8 px-4 text-white font-light">
-			<div className="max-w-7xl mx-auto">
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-					{/* Seção Sobre */}
-					<div className="md:col-span-1">
-						<h3 className="text-white font-medium mb-4">
-							{footerLinks.sobre.title}
-						</h3>
-						<ul className="space-y-2">
-							{footerLinks.sobre.links.map((link) => (
-								<li key={link.href}>
-									<Link
-										href={link.href}
-										className="text-gray-100 hover:text-[#ffe6a1] transition-colors"
-									>
-										{link.text}
-									</Link>
-								</li>
-							))}
-						</ul>
+		<footer className="relative w-full bg-[#1082a6] overflow-hidden">
+			{/* Elementos decorativos de fundo */}
+			<div className="absolute inset-0 opacity-5">
+				<div className="absolute top-10 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
+				<div className="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rounded-full"></div>
+				<div className="absolute top-1/2 left-1/3 w-16 h-16 border border-white/20 rounded-full"></div>
+				<div className="absolute bottom-10 left-1/4 w-20 h-20 border border-white/20 rounded-full"></div>
+			</div>
+			
+			{/* Gradiente superior */}
+			<div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+			
+			<div className="relative z-10 pt-20 pb-10 px-4 text-white">
+				<div className="max-w-7xl mx-auto">
+					{/* Logo/Brand area */}
+					<div className="mb-12 text-center">
+						<div className="inline-flex items-center space-x-3">
+							<div className="w-12 h-12 bg-gradient-to-br from-[#ffe6a1] to-[#ffcc66] rounded-lg flex items-center justify-center">
+								<span className="text-[#1082a6] font-bold text-xl">T</span>
+							</div>
+							<div>
+								<h2 className="text-2xl font-bold text-white">Trust Seguros</h2>
+								<p className="text-white/80 text-sm">Proteção que você pode confiar</p>
+							</div>
+						</div>
 					</div>
 
-					{/* Seção Relacionamento e Redes Sociais */}
-					<div className="md:col-span-2">
-						<div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-							{/* Relacionamento */}
-							<div>
-								<h3 className="text-white font-medium mb-4">
-									{footerLinks.relacionamento.title}
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+						{/* Seção Sobre */}
+						<div className="md:col-span-1">
+							<div className="relative">
+								<h3 className="text-white font-semibold text-lg mb-6 relative">
+									{footerLinks.sobre.title}
+									<div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#ffe6a1] to-transparent"></div>
 								</h3>
-								<ul className="space-y-2">
-									{footerLinks.relacionamento.links.map((link) => (
+								<ul className="space-y-3">
+									{footerLinks.sobre.links.map((link) => (
 										<li key={link.href}>
 											<Link
 												href={link.href}
-												className="text-gray-100 hover:text-[#ffe6a1] transition-colors"
+												className="group flex items-center text-white/90 hover:text-[#ffe6a1] transition-all duration-300"
 											>
+												<span className="w-1.5 h-1.5 bg-white/40 rounded-full mr-3 group-hover:bg-[#ffe6a1] transition-colors"></span>
 												{link.text}
 											</Link>
 										</li>
 									))}
-									<li className="pt-2">
-										<p className="text-gray-100">
-											{footerLinks.relacionamento.contato.telefone}
-										</p>
-									</li>
 								</ul>
 							</div>
+						</div>
 
-							{/* Redes Sociais */}
-							<div>
-								<h3 className="text-white font-medium mb-4">
-									REDES SOCIAIS
-								</h3>
-								<div className="flex space-x-4">
-									{socialLinks.map((social) => (
-										<a
-											key={social.name}
-											href={social.href}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="text-gray-100 hover:text-[#ffe6a1] transition-colors"
-											aria-label={social.name}
-										>
-											{social.icon}
-										</a>
-									))}
+						{/* Seção Relacionamento e Redes Sociais */}
+						<div className="md:col-span-2">
+							<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+								{/* Relacionamento */}
+								<div className="relative">
+									<h3 className="text-white font-semibold text-lg mb-6 relative">
+										{footerLinks.relacionamento.title}
+										<div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#ffe6a1] to-transparent"></div>
+									</h3>
+									<ul className="space-y-3">
+										{footerLinks.relacionamento.links.map((link) => (
+											<li key={link.href}>
+												<Link
+													href={link.href}
+													className="group flex items-center text-white/90 hover:text-[#ffe6a1] transition-all duration-300"
+												>
+													<span className="w-1.5 h-1.5 bg-white/40 rounded-full mr-3 group-hover:bg-[#ffe6a1] transition-colors"></span>
+													{link.text}
+												</Link>
+											</li>
+										))}
+										<li className="pt-4">
+											<div className="flex items-center text-white/90">
+												<svg className="w-4 h-4 mr-3 text-[#ffe6a1]" fill="currentColor" viewBox="0 0 20 20">
+													<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+												</svg>
+												<span>{footerLinks.relacionamento.contato.telefone}</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								{/* Redes Sociais */}
+								<div className="relative">
+									<h3 className="text-white font-semibold text-lg mb-6 relative">
+										REDES SOCIAIS
+										<div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#ffe6a1] to-transparent"></div>
+									</h3>
+									<div className="flex space-x-4">
+										{socialLinks.map((social) => (
+											<a
+												key={social.name}
+												href={social.href}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="group relative p-3 bg-white/10 rounded-xl hover:bg-[#ffe6a1]/20 transition-all duration-300 hover:scale-110"
+												aria-label={social.name}
+											>
+												<div className="text-white/90 group-hover:text-[#ffe6a1] transition-colors">
+													{social.icon}
+												</div>
+												<div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+													{social.name}
+												</div>
+											</a>
+										))}
+									</div>
+									<p className="text-white/70 text-sm mt-4">
+										Siga-nos para dicas e novidades sobre seguros
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				{/* Copyright */}
-				<div className="mt-12 pt-8 border-t border-gray-100/10 text-center">
-					<p className="text-gray-100">
-						© {new Date().getFullYear()} Trust Seguros. Todos os direitos
-						reservados.
-					</p>
+					{/* Copyright */}
+					<div className="mt-16 pt-8 border-t border-white/10 text-center relative">
+						<div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-px bg-gradient-to-r from-transparent via-[#ffe6a1] to-transparent"></div>
+						<p className="text-white/80 text-sm">
+							© {new Date().getFullYear()} Trust Seguros. Todos os direitos reservados.
+						</p>
+						<p className="text-white/60 text-xs mt-2">
+							Desenvolvido com tecnologia e segurança para sua proteção
+						</p>
+					</div>
 				</div>
 			</div>
 		</footer>

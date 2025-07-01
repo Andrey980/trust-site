@@ -1,55 +1,79 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
+import Image from 'next/image';
 
 export default function SobrePage() {
   return (
-    <main className="pt-[72px]">
+    <main className="pt-[72px] bg-white">
       <Header />
+
+      {/* Banner Hero */}
+      <section className="bg-white mt-20">
+        <div className="container mx-auto px-4">
+          <div className="relative h-[400px] bg-gradient-to-r from-[#1082a6] to-[#0a6b8a] overflow-hidden rounded-2xl">
+            <div className="absolute inset-0 bg-black/30 rounded-2xl"></div>
+            <div className="relative px-8 h-full flex items-center">
+              <div className="max-w-2xl text-white">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  Sobre a Trust
+                </h1>
+                <p className="text-lg md:text-xl opacity-90 mb-6">
+                  Mais de 15 anos protegendo o que é mais importante para você e sua família.
+                </p>
+              </div>
+            </div>
+            {/* Efeito visual de fundo */}
+            <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
+              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <polygon points="50,0 100,0 100,100 0,100" fill="white"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Nossa História */}
       <section className="py-30 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">Nossa História</h2>
-                <p className="text-gray-700 mb-4 text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <p className="text-gray-700 mb-4 text-justify">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p className="text-gray-700 text-justify">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
-                </p>
-              </div>
-              <div className="md:w-1/2">
-                <div className="bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-lg p-8 text-white">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Nossa História</h2>
+              <p className="text-gray-700 mb-4 text-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p className="text-gray-700 mb-4 text-justify">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p className="text-gray-700 text-justify">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <div className="bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-lg p-8 text-white">
+                <div className="text-center">
+                  <div className="text-4xl font-bold mb-2">15+</div>
+                  <div className="text-lg">Anos de experiência</div>
+                </div>
+                <div className="grid grid-cols-2 gap-6 mt-8">
                   <div className="text-center">
-                    <div className="text-4xl font-bold mb-2">15+</div>
-                    <div className="text-lg">Anos de experiência</div>
+                    <div className="text-2xl font-bold mb-1">50k+</div>
+                    <div className="text-sm">Clientes atendidos</div>
                   </div>
-                  <div className="grid grid-cols-2 gap-6 mt-8">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold mb-1">50k+</div>
-                      <div className="text-sm">Clientes atendidos</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold mb-1">200+</div>
-                      <div className="text-sm">Parceiros</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold mb-1">98%</div>
-                      <div className="text-sm">Satisfação</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold mb-1">24/7</div>
-                      <div className="text-sm">Suporte</div>
-                    </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold mb-1">200+</div>
+                    <div className="text-sm">Parceiros</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold mb-1">98%</div>
+                    <div className="text-sm">Satisfação</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold mb-1">24/7</div>
+                    <div className="text-sm">Suporte</div>
                   </div>
                 </div>
               </div>
@@ -61,9 +85,7 @@ export default function SobrePage() {
       {/* Missão, Visão e Valores */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Missão, Visão e Valores</h2>
-            
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Missão, Visão e Valores</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Missão */}
               <div className="text-center">
@@ -108,16 +130,13 @@ export default function SobrePage() {
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
       {/* Nossos Diferenciais */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Nossos Diferenciais</h2>
-            
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Nossos Diferenciais</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 rounded-lg border hover:shadow-lg transition-shadow">
                 <div className="bg-[#1082a6] w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -191,12 +210,293 @@ export default function SobrePage() {
                 </p>
               </div>
             </div>
+        </div>
+      </section>
+
+      {/* Equipe e Liderança */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossa Equipe</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Profissionais especializados e experientes comprometidos com a excelência no atendimento
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+              <div className="w-32 h-32 bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-full mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white text-4xl font-bold">CEO</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Liderança Executiva</h3>
+              <p className="text-gray-600 mb-4">
+                Direção estratégica com mais de 20 anos de experiência no mercado de seguros
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>• Visão estratégica do negócio</p>
+                <p>• Relacionamento com seguradoras</p>
+                <p>• Desenvolvimento de parcerias</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+              <div className="w-32 h-32 bg-gradient-to-br from-[#ff6b35] to-[#e55529] rounded-full mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white text-3xl font-bold">TECH</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Equipe Técnica</h3>
+              <p className="text-gray-600 mb-4">
+                Especialistas em análise de riscos e produtos de seguros especializados
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>• Análise técnica especializada</p>
+                <p>• Desenvolvimento de produtos</p>
+                <p>• Suporte técnico avançado</p>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+              <div className="w-32 h-32 bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-full mx-auto mb-6 flex items-center justify-center">
+                <span className="text-white text-3xl font-bold">SAC</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Atendimento</h3>
+              <p className="text-gray-600 mb-4">
+                Equipe dedicada ao atendimento personalizado e suporte ao cliente
+              </p>
+              <div className="text-sm text-gray-500">
+                <p>• Atendimento personalizado</p>
+                <p>• Suporte pós-venda</p>
+                <p>• Gestão de sinistros</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <WhatsappButton />
+
+      {/* Certificações e Credenciais */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Certificações e Credenciais</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Reconhecimentos que atestam nossa competência e compromisso com a excelência
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 border rounded-lg hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">SUSEP</h3>
+              <p className="text-sm text-gray-600">
+                Registrada e regulamentada pela Superintendência de Seguros Privados
+              </p>
+            </div>
+
+            <div className="text-center p-6 border rounded-lg hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#ff6b35] to-[#e55529] rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 11H7v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-1V5a4 4 0 0 0-8 0v2z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">ISO 27001</h3>
+              <p className="text-sm text-gray-600">
+                Certificação em segurança da informação para proteção de dados
+              </p>
+            </div>
+
+            <div className="text-center p-6 border rounded-lg hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">CNseg</h3>
+              <p className="text-sm text-gray-600">
+                Membro da Confederação Nacional das Seguradoras
+              </p>
+            </div>
+
+            <div className="text-center p-6 border rounded-lg hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#ff6b35] to-[#e55529] rounded-full mx-auto mb-4 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">FENACOR</h3>
+              <p className="text-sm text-gray-600">
+                Federação Nacional dos Corretores de Seguros
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Responsabilidade Social */}
+      <section className="py-16 bg-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-orange-50 opacity-50"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Responsabilidade Social</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Comprometidos com o desenvolvimento sustentável e o bem-estar da comunidade
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800">Sustentabilidade</h3>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-[#1082a6] rounded-full mt-2 mr-3"></div>
+                  <p className="text-gray-600">Digitalização de processos para redução do uso de papel</p>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-[#1082a6] rounded-full mt-2 mr-3"></div>
+                  <p className="text-gray-600">Programas de conscientização ambiental</p>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-[#1082a6] rounded-full mt-2 mr-3"></div>
+                  <p className="text-gray-600">Parcerias com organizações ambientais</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-[#ff6b35] rounded-full flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16,4C16.88,4 17.67,4.84 17.67,5.84C17.67,6.84 16.88,7.68 16,7.68C15.12,7.68 14.33,6.84 14.33,5.84C14.33,4.84 15.12,4 16,4M13,9H19V23H13V9M8,4C8.88,4 9.67,4.84 9.67,5.84C9.67,6.84 8.88,7.68 8,7.68C7.12,7.68 6.33,6.84 6.33,5.84C6.33,4.84 7.12,4 8,4M5,9H11V23H5V9Z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800">Comunidade</h3>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-[#ff6b35] rounded-full mt-2 mr-3"></div>
+                  <p className="text-gray-600">Apoio a instituições de caridade locais</p>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-[#ff6b35] rounded-full mt-2 mr-3"></div>
+                  <p className="text-gray-600">Programas de educação financeira gratuitos</p>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-[#ff6b35] rounded-full mt-2 mr-3"></div>
+                  <p className="text-gray-600">Voluntariado corporativo ativo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Depoimentos e Testemunhos */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">O que Dizem Nossos Clientes</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Depoimentos reais de quem confia na Trust para proteger o que mais importa
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-8 rounded-lg relative">
+              <div className="absolute top-4 left-4 text-[#1082a6] text-4xl">"</div>
+              <div className="mt-8">
+                <p className="text-gray-600 mb-6 italic">
+                  "Excelente atendimento e agilidade na resolução do meu sinistro. A Trust superou todas as minhas expectativas."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    M
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Maria Silva</h4>
+                    <p className="text-sm text-gray-600">Cliente Seguro Auto</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg relative">
+              <div className="absolute top-4 left-4 text-[#ff6b35] text-4xl">"</div>
+              <div className="mt-8">
+                <p className="text-gray-600 mb-6 italic">
+                  "Profissionais extremamente qualificados. Encontraram a melhor solução para minha empresa com ótimo custo-benefício."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#ff6b35] to-[#e55529] rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    J
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">João Santos</h4>
+                    <p className="text-sm text-gray-600">Empresário</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-lg relative">
+              <div className="absolute top-4 left-4 text-[#1082a6] text-4xl">"</div>
+              <div className="mt-8">
+                <p className="text-gray-600 mb-6 italic">
+                  "Há anos sou cliente da Trust. Confiança e transparência são os diferenciais que mais valorizo."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    A
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-800">Ana Costa</h4>
+                    <p className="text-sm text-gray-600">Cliente Vida e Previdência</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section className="py-16 bg-gradient-to-r from-[#1082a6] to-[#0a6b8a] relative overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Faça Parte da Família Trust
+            </h2>
+            <p className="text-xl mb-8">
+              Descubra como podemos proteger você, sua família e seu patrimônio com as melhores soluções em seguros
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-[#ff6b35] hover:bg-[#e55529] text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Solicitar Cotação
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-[#1082a6] px-8 py-3 rounded-lg font-semibold transition-colors">
+                Falar com Consultor
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* Elementos decorativos */}
+        <div className="absolute top-10 left-10 w-32 h-32 border border-white opacity-10 rounded-full"></div>
+        <div className="absolute bottom-10 right-10 w-24 h-24 border border-white opacity-10 rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-white opacity-5 rounded-full"></div>
+      </section>
+
       <Footer />
+      <WhatsappButton />
     </main>
   );
-};
+}
 
