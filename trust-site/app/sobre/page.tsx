@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function SobrePage() {
   return (
@@ -411,10 +411,10 @@ export default function SobrePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-8 rounded-lg relative">
-              <div className="absolute top-4 left-4 text-[#1082a6] text-4xl">"</div>
+              <div className="absolute top-4 left-4 text-[#1082a6] text-4xl">&ldquo;</div>
               <div className="mt-8">
                 <p className="text-gray-600 mb-6 italic">
-                  "Excelente atendimento e agilidade na resolução do meu sinistro. A Trust superou todas as minhas expectativas."
+                  &ldquo;Excelente atendimento e agilidade na resolução do meu sinistro. A Trust superou todas as minhas expectativas.&rdquo;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -429,10 +429,10 @@ export default function SobrePage() {
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg relative">
-              <div className="absolute top-4 left-4 text-[#ff6b35] text-4xl">"</div>
+              <div className="absolute top-4 left-4 text-[#ff6b35] text-4xl">&ldquo;</div>
               <div className="mt-8">
                 <p className="text-gray-600 mb-6 italic">
-                  "Profissionais extremamente qualificados. Encontraram a melhor solução para minha empresa com ótimo custo-benefício."
+                  &ldquo;Profissionais extremamente qualificados. Encontraram a melhor solução para minha empresa com ótimo custo-benefício.&rdquo;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-[#ff6b35] to-[#e55529] rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -447,10 +447,10 @@ export default function SobrePage() {
             </div>
 
             <div className="bg-gray-50 p-8 rounded-lg relative">
-              <div className="absolute top-4 left-4 text-[#1082a6] text-4xl">"</div>
+              <div className="absolute top-4 left-4 text-[#1082a6] text-4xl">&ldquo;</div>
               <div className="mt-8">
                 <p className="text-gray-600 mb-6 italic">
-                  "Há anos sou cliente da Trust. Confiança e transparência são os diferenciais que mais valorizo."
+                  &ldquo;Há anos sou cliente da Trust. Confiança e transparência são os diferenciais que mais valorizo.&rdquo;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-full flex items-center justify-center text-white font-bold mr-4">

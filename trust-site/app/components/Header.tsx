@@ -86,14 +86,14 @@ interface MenuItemProps {
 }
 
 const MenuItem = ({ item, isActive }: MenuItemProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
   const isAtendimento = item.label === 'Atendimento';
 
   return (
     <div
       className="relative lg:py-8 h-full flex align-center justify-center group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      // onMouseEnter={() => setIsHovered(true)}
+      // onMouseLeave={() => setIsHovered(false)}
     >
       <Link
         href={item.href}        className={`relative ${
