@@ -215,7 +215,7 @@ export default function SobrePage() {
       </section>
 
       {/* Equipe e Liderança */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nossa Equipe</h2>
@@ -271,10 +271,10 @@ export default function SobrePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certificações e Credenciais */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Certificações e Credenciais</h2>
@@ -333,72 +333,8 @@ export default function SobrePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Responsabilidade Social */}
-      <section className="py-16 bg-gray-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-orange-50 opacity-50"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Responsabilidade Social</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprometidos com o desenvolvimento sustentável e o bem-estar da comunidade
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800">Sustentabilidade</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#1082a6] rounded-full mt-2 mr-3"></div>
-                  <p className="text-gray-600">Digitalização de processos para redução do uso de papel</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#1082a6] rounded-full mt-2 mr-3"></div>
-                  <p className="text-gray-600">Programas de conscientização ambiental</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#1082a6] rounded-full mt-2 mr-3"></div>
-                  <p className="text-gray-600">Parcerias com organizações ambientais</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-[#ff6b35] rounded-full flex items-center justify-center mr-4">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16,4C16.88,4 17.67,4.84 17.67,5.84C17.67,6.84 16.88,7.68 16,7.68C15.12,7.68 14.33,6.84 14.33,5.84C14.33,4.84 15.12,4 16,4M13,9H19V23H13V9M8,4C8.88,4 9.67,4.84 9.67,5.84C9.67,6.84 8.88,7.68 8,7.68C7.12,7.68 6.33,6.84 6.33,5.84C6.33,4.84 7.12,4 8,4M5,9H11V23H5V9Z"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800">Comunidade</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#ff6b35] rounded-full mt-2 mr-3"></div>
-                  <p className="text-gray-600">Apoio a instituições de caridade locais</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#ff6b35] rounded-full mt-2 mr-3"></div>
-                  <p className="text-gray-600">Programas de educação financeira gratuitos</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-[#ff6b35] rounded-full mt-2 mr-3"></div>
-                  <p className="text-gray-600">Voluntariado corporativo ativo</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Depoimentos e Testemunhos */}
       <section className="py-16 bg-gradient-to-r from-[#1082a6] to-[#0a6b8a] relative overflow-hidden">
