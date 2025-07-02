@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
+import ScrollToTop from '../components/ScrollToTop';
 // import ServiceInfo from './components/ServiceInfo';
 
 interface ServiceType {
@@ -797,6 +798,7 @@ export default function GarantiasPage() {
       </section>
       
       <WhatsappButton />
+      <ScrollToTop />
       <Footer />
     </main>
   );

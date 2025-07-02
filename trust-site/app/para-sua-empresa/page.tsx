@@ -11,6 +11,7 @@ import ServiceInfo from './components/ServiceInfo';
 import BenefitsSection from './components/BenefitsSection';
 import FaqSection from './components/FaqSection';
 import CtaSection from './components/CtaSection';
+import ScrollToTop from '../components/ScrollToTop';
 
 // Interface para os detalhes do serviço
 interface ServiceDetail {
@@ -337,6 +338,7 @@ export default function ParaSuaEmpresaPage() {
       />
       <FaqSection faqs={faqs} />
       <WhatsappButton />
+      <ScrollToTop />
       <Footer />
     </main>
   );

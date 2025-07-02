@@ -1,5 +1,6 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import ScrollToTop from '../components/ScrollToTop';
 import WhatsappButton from '../components/WhatsappButton';
 import AcoesContent from './components/AcoesContent';
 // import GradientContainer from './components/GradientContainer';
@@ -18,6 +19,7 @@ export default function HomePage() {
       <AcoesContent />
       <SeguradorasContent />
       <WhatsappButton />
+      <ScrollToTop />
       <Footer />
       {/* Adicione mais seções aqui conforme necessário */}
     </main>

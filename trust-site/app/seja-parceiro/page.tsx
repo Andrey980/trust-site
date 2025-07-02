@@ -1,5 +1,6 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import ScrollToTop from '../components/ScrollToTop';
 import WhatsappButton from '../components/WhatsappButton';
 import Image from 'next/image';
 
@@ -354,6 +355,7 @@ export default function ParceiroPage() {
       </section>
       
       <WhatsappButton />
+      <ScrollToTop />
       <Footer />
     </main>
   );
