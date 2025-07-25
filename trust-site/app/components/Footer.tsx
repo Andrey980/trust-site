@@ -4,7 +4,7 @@ import Link from 'next/link';
 const socialLinks = [
 	{
 		name: 'Facebook',
-		href: 'https://facebook.com/trustseguros',
+		href: 'https://www.facebook.com/share/1BhCFJ36zJ/',
 		icon: (
 			<svg
 				className="w-6 h-6 fill-current"
@@ -17,7 +17,7 @@ const socialLinks = [
 	},
 	{
 		name: 'LinkedIn',
-		href: 'https://linkedin.com/company/trustseguros',
+		href: 'https://www.linkedin.com/company/trust-insurance-broker/',
 		icon: (
 			<svg
 				className="w-6 h-6 fill-current"
@@ -96,7 +96,7 @@ export default function Footer() {
 						</div>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-12 pl-16">
 						{/* Seção Sobre */}
 						<div className="md:col-span-1">
 							<div className="relative">

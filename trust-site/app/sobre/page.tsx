@@ -83,8 +83,8 @@ export default function SobrePage() {
       {/* Missão, Visão e Valores */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Missão, Visão e Valores</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Nossos Valores</h2>
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Missão */}
               <div className="text-center">
                 <div className="bg-[#1082a6] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -92,11 +92,9 @@ export default function SobrePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Missão</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Confiança e Transparência</h3>
                 <p className="text-gray-700 text-justify">
-                  Transformar a contratação de seguros e garantias em uma experiência simples, transparente e eficaz. 
-                  Assegurar a efetivação de seus negócios, promover a saúde da sua empresa e garantir sua proteção individual, 
-                  removendo burocracias e adicionando valor a cada etapa.
+                  Acreditamos que a base de qualquer relação duradoura é a confiança. Por isso, operamos com total transparência em todas as nossas ações, processos e comunicações, garantindo clareza e honestidade para nossos clientes, parceiros e colaboradores.
                 </p>
               </div>
 
@@ -108,11 +106,9 @@ export default function SobrePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Visão</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Excelência e Inovação</h3>
                 <p className="text-gray-700 text-justify">
-                  Ser referência em garantias locatícias e soluções de seguros para empresas e pessoas. 
-                  Ser reconhecidos não apenas pelos resultados, mas pela excelência no atendimento, 
-                  pela ética inabalável e pela contribuição contínua para um mercado mais seguro e confiável.
+                  Buscamos constantemente a excelência em tudo o que fazemos, desde o atendimento ao cliente até o desenvolvimento de soluções. Estamos sempre atentos às inovações do mercado para oferecer as melhores e mais eficazes garantias e seguros.
                 </p>
               </div>
 
@@ -120,14 +116,12 @@ export default function SobrePage() {
               <div className="text-center">
                 <div className="bg-[#1082a6] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 515.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 919.288 0M15 7a3 3 0 11-6 0 3 3 0 616 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Valores</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">Parceria e Suporte</h3>
                 <p className="text-gray-700 text-justify">
-                  Cada garantia emitida e cada seguro contratado é um elo de confiança que construímos com você. 
-                  Somos parceiros no seu crescimento, na segurança do seu patrimônio e na concretização dos seus sonhos, 
-                  sempre pautados pela transparência, ética e excelência no atendimento.
+                  Vemos nossos clientes como parceiros, não apenas como compradores de serviços. Nosso compromisso é oferecer um suporte dedicado e proativo, acompanhando-os em cada etapa, para que possam focar no crescimento dos seus negócios e na segurança dos seus bens.
                 </p>
               </div>
             </div>
