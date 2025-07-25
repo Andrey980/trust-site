@@ -2,7 +2,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
 import ScrollToTop from '../components/ScrollToTop';
-// import Image from 'next/image';
+import Image from 'next/image';
 
 export default function SobrePage() {
   return (
@@ -10,29 +10,46 @@ export default function SobrePage() {
       <Header />
 
       {/* Banner Hero */}
-      <section className="bg-white mt-20">
+      <div className="w-full bg-white pt-20">
+        {/* Container com margin para o banner */}
         <div className="container mx-auto px-4">
-          <div className="relative h-[400px] bg-gradient-to-r from-[#1082a6] to-[#0a6b8a] overflow-hidden rounded-2xl">
-            <div className="absolute inset-0 bg-black/30 rounded-2xl"></div>
-            <div className="relative px-8 h-full flex items-center">
-              <div className="max-w-2xl text-white">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  Sobre a Trust
-                </h1>
-                <p className="text-lg md:text-xl opacity-90 mb-6">
-                  Mais de 13 anos protegendo o que é mais importante para você e sua família.
-                </p>
-              </div>
+          {/* Banner com imagem de fundo */}
+          <section className="relative bg-transparent text-white overflow-hidden rounded-lg shadow-lg">
+            {/* Sobreposição de imagem com opacidade */}
+            <div className="absolute inset-0">
+              <Image 
+                src="/img/sobre.png" 
+                alt="Fundo do banner" 
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-[#1082a6] opacity-70"></div>
             </div>
-            {/* Efeito visual de fundo */}
-            <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <polygon points="50,0 100,0 100,100 0,100" fill="white"/>
-              </svg>
+            
+            {/* Elemento laranja decorativo no canto superior esquerdo */}
+            <div className="absolute top-0 left-0 w-24 h-24 md:w-32 md:h-32 bg-[#ff6b35] rounded-br-full z-10"></div>
+            
+            {/* Decoração com círculos */}
+            <div className="absolute bottom-6 left-6 flex space-x-3 z-10">
+              <div className="w-4 h-4 bg-white opacity-70 rounded-full"></div>
+              <div className="w-4 h-4 bg-white opacity-70 rounded-full"></div>
+              <div className="w-4 h-4 bg-white opacity-70 rounded-full"></div>
+              <div className="w-4 h-4 bg-white opacity-70 rounded-full"></div>
+              <div className="w-4 h-4 bg-white opacity-70 rounded-full"></div>
             </div>
-          </div>
+            
+            {/* Elemento decorativo no canto superior direito */}
+            <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-[#1c3d5a] opacity-80 rounded-bl-full z-10"></div>
+            
+            <div className="container mx-auto px-4 py-24 relative z-20">
+              <h1 className="text-4xl md:text-5xl font-bold text-center text-white">
+                Sobre a Trust
+              </h1>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
 
       {/* Nossa História */}
       <section className="py-30 bg-white">
