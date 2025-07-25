@@ -20,7 +20,7 @@ export default function SobrePage() {
                   Sobre a Trust
                 </h1>
                 <p className="text-lg md:text-xl opacity-90 mb-6">
-                  Mais de 15 anos protegendo o que é mais importante para você e sua família.
+                  Mais de 13 anos protegendo o que é mais importante para você e sua família.
                 </p>
               </div>
             </div>
@@ -38,34 +38,31 @@ export default function SobrePage() {
       <section className="py-30 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Nossa História</h2>
+            <div className="md:w-3/5">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Nossa História: Confiança que move o Futuro</h2>
               <p className="text-gray-700 mb-4 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Em 2012, em meio ao dinamismo do mercado imobiliário, nasceu a Trust Seguros. Começamos modestos, dentro de uma imobiliária, com um propósito claro: simplificar as garantias locatícias e oferecer o suporte que corretores e clientes precisavam para realizar seus negócios com segurança e tranquilidade.
               </p>
               <p className="text-gray-700 mb-4 text-justify">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Desde o início, nosso compromisso foi com a eficiência e a transparência. Acreditamos que o processo de contratar um seguro ou uma garantia não precisa ser complexo, mas sim uma ferramenta para impulsionar seus projetos e proteger o que é mais valioso para você.
               </p>
               <p className="text-gray-700 text-justify">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                Essa dedicação nos trouxe frutos significativos. Há mais de dois anos, com orgulho, fazemos parte do renomado grupo Porto Elite, uma parceria que validou nossa expertise e nos impulsionou a novos patamares. O reconhecimento veio de forma concreta: no último trimestre, conquistamos o primeiro lugar entre as corretoras do grupo, um testemunho da nossa paixão por servir e da confiança que nossos clientes depositam em nós.
               </p>
             </div>
-            <div className="md:w-1/2">
-              <div className="bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-lg p-8 text-white">
-                <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">13+</div>
+            <div className="md:w-2/5">
+              <div className="bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-lg p-10 text-white">
+                <div className="text-center mb-10">
+                  <div className="text-4xl font-bold mb-3">13+</div>
                   <div className="text-lg">Anos de experiência</div>
                 </div>
-                <div className="grid grid-cols-2 gap-6 mt-8">
+                <div className="grid grid-cols-2 gap-8">
                   <div className="text-center">
-                    <div className="text-2xl font-bold mb-1">5k+</div>
+                    <div className="text-2xl font-bold mb-2">5k+</div>
                     <div className="text-sm">Clientes atendidos</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold mb-1">200+</div>
+                    <div className="text-2xl font-bold mb-2">200+</div>
                     <div className="text-sm">Parceiros</div>
                   </div>
                   <div className="text-center">
@@ -97,8 +94,9 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Missão</h3>
                 <p className="text-gray-700 text-justify">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                  Transformar a contratação de seguros e garantias em uma experiência simples, transparente e eficaz. 
+                  Assegurar a efetivação de seus negócios, promover a saúde da sua empresa e garantir sua proteção individual, 
+                  removendo burocracias e adicionando valor a cada etapa.
                 </p>
               </div>
 
@@ -112,8 +110,9 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Visão</h3>
                 <p className="text-gray-700 text-justify">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+                  Ser referência em garantias locatícias e soluções de seguros para empresas e pessoas. 
+                  Ser reconhecidos não apenas pelos resultados, mas pela excelência no atendimento, 
+                  pela ética inabalável e pela contribuição contínua para um mercado mais seguro e confiável.
                 </p>
               </div>
 
@@ -126,8 +125,9 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Valores</h3>
                 <p className="text-gray-700 text-justify">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                  Cada garantia emitida e cada seguro contratado é um elo de confiança que construímos com você. 
+                  Somos parceiros no seu crescimento, na segurança do seu patrimônio e na concretização dos seus sonhos, 
+                  sempre pautados pela transparência, ética e excelência no atendimento.
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Agilidade</h3>
                 <p className="text-gray-600 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+                  Processos otimizados para emissão rápida de apólices e garantias, garantindo que você tenha a proteção que precisa no menor tempo possível.
                 </p>
               </div>
 
@@ -159,7 +159,7 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Segurança</h3>
                 <p className="text-gray-600 text-sm">
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                  Parcerias com as principais seguradoras do mercado, garantindo solidez e confiabilidade em todas as nossas soluções.
                 </p>
               </div>
 
@@ -171,7 +171,7 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Equipe Especializada</h3>
                 <p className="text-gray-600 text-sm">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                  Profissionais altamente qualificados e experientes, prontos para oferecer as melhores soluções personalizadas para suas necessidades.
                 </p>
               </div>
 
@@ -183,7 +183,7 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Disponibilidade</h3>
                 <p className="text-gray-600 text-sm">
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+                  Suporte 24/7 para nossos clientes, garantindo assistência completa sempre que você precisar.
                 </p>
               </div>
 
@@ -195,7 +195,7 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Transparência</h3>
                 <p className="text-gray-600 text-sm">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+                  Comunicação clara e objetiva em todos os processos, sem letras miúdas ou surpresas desagradáveis.
                 </p>
               </div>
 
@@ -207,7 +207,7 @@ export default function SobrePage() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">Inovação</h3>
                 <p className="text-gray-600 text-sm">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
+                  Soluções modernas e tecnologia de ponta para simplificar e aprimorar continuamente nossos serviços.
                 </p>
               </div>
             </div>
