@@ -56,12 +56,12 @@ export default function SobrePage() {
             <div className="md:w-1/2">
               <div className="bg-gradient-to-br from-[#1082a6] to-[#0a6b8a] rounded-lg p-8 text-white">
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">15+</div>
+                  <div className="text-4xl font-bold mb-2">13+</div>
                   <div className="text-lg">Anos de experiência</div>
                 </div>
                 <div className="grid grid-cols-2 gap-6 mt-8">
                   <div className="text-center">
-                    <div className="text-2xl font-bold mb-1">50k+</div>
+                    <div className="text-2xl font-bold mb-1">5k+</div>
                     <div className="text-sm">Clientes atendidos</div>
                   </div>
                   <div className="text-center">
@@ -69,7 +69,7 @@ export default function SobrePage() {
                     <div className="text-sm">Parceiros</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold mb-1">98%</div>
+                    <div className="text-2xl font-bold mb-1">100%</div>
                     <div className="text-sm">Satisfação</div>
                   </div>
                   <div className="text-center">
