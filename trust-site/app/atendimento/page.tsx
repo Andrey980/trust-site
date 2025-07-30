@@ -150,11 +150,11 @@ export default function AtendimentoPage() {
               Canais de Atendimento
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Outros canais */}
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Canais Digitais</h3>
-                <ul className="space-y-4">                  <li className="flex items-start">
+            <div className="flex justify-center">
+              {/* Canais digitais centralizados e aumentados */}
+              <div className="bg-white p-12 rounded-lg shadow-md max-w-2xl w-full">
+                <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center">Canais Digitais</h3>
+                <ul className="space-y-6">                  <li className="flex items-start">
                     <div className="bg-[#e5f2f5] p-2 rounded-full mr-4">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#0d7592]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -163,7 +163,6 @@ export default function AtendimentoPage() {
                     <div>
                       <h4 className="font-medium text-gray-900">E-mail</h4>
                       <p className="text-gray-600 mt-1">franklin@trustseguros.com.br</p>
-                      <br />
                       <p className="text-gray-600 mt-1">atendimento2@trustseguros.com.br</p>
                       <p className="text-sm text-gray-500 mt-1">Resposta em até 48h úteis</p>
                     </div>
