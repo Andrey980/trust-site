@@ -59,14 +59,14 @@ const menuLinks: MenuItem[] = [
       { href: '/titulo-capitalizacao', label: 'Titulo Capitalização' },
     ]
   },
-  { 
-    href: '/sinistro', 
-    label: 'Sinistro',
-    submenu: [
-      { href: '/abrir-sinistro', label: 'Abrir um Sinistro' },
-      { href: '/como-funciona', label: 'Como Funciona' },
-    ]
-  },
+  // { 
+  //   href: '/atendimento', 
+  //   label: 'Atendimento',
+  //   submenu: [
+  //     { href: '/abrir-sinistro', label: 'Abrir um Sinistro' },
+  //     { href: '/como-funciona', label: 'Como Funciona' },
+  //   ]
+  // },
   { 
     href: '/seja-parceiro', 
     label: 'Seja Parceiro',
