@@ -69,7 +69,6 @@ export default function ParaSuaEmpresaPage() {
       title: 'Consórcio Empresarial',
       description: 'Planejamento financeiro inteligente para aquisição de bens e serviços para sua empresa, com parcelas que cabem no orçamento e sem juros. Uma alternativa econômica ao financiamento tradicional.',
       features: [
-        'Parcelas ajustáveis ao fluxo de caixa',
         'Sem juros, apenas taxa administrativa',
         'Possibilidade de lance para contemplação antecipada',
         'Diversos grupos disponíveis para empresas',
@@ -77,11 +76,8 @@ export default function ParaSuaEmpresaPage() {
       ],
       coverages: [
         'Frotas de veículos',
-        'Equipamentos industriais',
         'Imóveis comerciais',
         'Reformas e ampliações',
-        'Máquinas e implementos',
-        'Capital de giro'
       ],
       imageUrl: '/img/consorcio.png'
     },
@@ -109,7 +105,6 @@ export default function ParaSuaEmpresaPage() {
       title: 'Equipamentos Portáteis Empresariais',
       description: 'Proteção para os equipamentos portáteis da sua empresa como notebooks, tablets, projetores e outros dispositivos essenciais para o trabalho de sua equipe.',
       features: [
-        'Cobertura dentro e fora do local de risco',
         'Proteção nacional e internacional',
         'Reposição por equipamentos novos',
         'Gestão simplificada de múltiplos equipamentos',
@@ -120,7 +115,6 @@ export default function ParaSuaEmpresaPage() {
         'Quebra acidental',
         'Danos elétricos',
         'Danos por líquidos',
-        'Incêndio e explosão',
         'Perda total'
       ],
       imageUrl: '/img/equipamentos.png'
@@ -178,10 +172,6 @@ export default function ParaSuaEmpresaPage() {
       coverages: [
         'Operações comerciais e industriais',
         'Danos a terceiros em estabelecimentos',
-        'Produtos e serviços',
-        'Empregador (acidentes com colaboradores)',
-        'Danos morais decorrentes',
-        'Poluição súbita e acidental'
       ],
       imageUrl: '/img/rc-profissional.png'
     },
