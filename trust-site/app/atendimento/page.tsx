@@ -151,35 +151,6 @@ export default function AtendimentoPage() {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Telefones */}
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Atendimento Telefônico</h3>
-                <ul className="space-y-4">                  <li className="flex items-start">
-                    <div className="bg-[#e5f2f5] p-2 rounded-full mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#0d7592]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Central de Atendimento</h4>
-                      <p className="text-gray-600 mt-1">0800 123 4567</p>
-                      <p className="text-sm text-gray-500 mt-1">Segunda a sexta, das 8h às 18h</p>
-                    </div>
-                  </li>                  <li className="flex items-start">
-                    <div className="bg-[#e5f2f5] p-2 rounded-full mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#0d7592]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900">Assistência 24h</h4>
-                      <p className="text-gray-600 mt-1">0800 777 8888</p>
-                      <p className="text-sm text-gray-500 mt-1">Todos os dias, 24 horas</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              
               {/* Outros canais */}
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-6">Canais Digitais</h3>
@@ -191,7 +162,9 @@ export default function AtendimentoPage() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">E-mail</h4>
-                      <p className="text-gray-600 mt-1">atendimento@trustsite.com.br</p>
+                      <p className="text-gray-600 mt-1">franklin@trustseguros.com.br</p>
+                      <br />
+                      <p className="text-gray-600 mt-1">atendimento2@trustseguros.com.br</p>
                       <p className="text-sm text-gray-500 mt-1">Resposta em até 48h úteis</p>
                     </div>
                   </li>                  <li className="flex items-start">
@@ -202,7 +175,7 @@ export default function AtendimentoPage() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900">WhatsApp</h4>
-                      <p className="text-gray-600 mt-1">11 93337-2957</p>
+                      <p className="text-gray-600 mt-1">+55 11 93337-2957</p>
                       <p className="text-sm text-gray-500 mt-1">Atendimento de 8h às 18h</p>
                     </div>
                   </li>
