@@ -129,10 +129,13 @@ export default function ParceiroPage() {
               <div className="md:w-1/2">
                 <h2 className="text-3xl font-bold text-gray-800 mb-6">Para Administradores</h2>
                 <p className="text-gray-700 mb-6 text-justify">
-                  Potencialize sua carreira como administrador de seguros com nossa parceria estratégica.
-                  Oferecemos uma plataforma completa, suporte operacional e acesso a produtos exclusivos
-                  para que você possa focar no crescimento da sua carteira.
+                 Sabemos que sua principal missão é otimizar a gestão de propriedades, 
+                 garantindo tranquilidade aos proprietários e satisfação aos inquilinos. 
+                 Nesse cenário, gostaríamos de apresentar uma proposta de parceria que não 
+                 só complementa seus serviços, mas também agrega valor significativo ao seu 
+                 negócio e, consequentemente, aos seus clientes: a colaboração com uma corretora de seguros especializada em locações e serviços imobiliarios.
                 </p>
+                <p className="text-gray-700 mb-6 text-justify font-bold">Conte Com:</p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-[#1082a6] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +153,7 @@ export default function ParceiroPage() {
                     <svg className="w-6 h-6 text-[#1082a6] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    <span className="text-gray-700">Suporte especializado para tomada de decisões</span>
+                    <span className="text-gray-700">Suporte especializado para sinistro</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-[#1082a6] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -193,16 +196,17 @@ export default function ParceiroPage() {
               <div className="md:w-1/2">
                 <h2 className="text-3xl font-bold text-gray-800 mb-6">Para Corretores Autônomos</h2>
                 <p className="text-gray-700 mb-6 text-justify">
-                  Maximize suas vendas e reduza burocracias. Como corretor autônomo parceiro da Trust,
-                  você tem acesso a dezenas de seguradoras, produtos exclusivos e toda a estrutura
-                  operacional para focar no que realmente importa: vender mais.
-                </p>
+                  Maximize suas vendas e reduza burocracias. Como corretor
+                   autônomo parceiro da Trust, você tem acesso a dezenas de 
+                   seguradoras, produtos exclusivos e toda a estrutura operacional
+                    para focar no que realmente importa: fechar mais negocios!
+                </p>    
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-[#1082a6] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    <span className="text-gray-700">Acesso a todas as principais seguradoras do mercado</span>
+                    <span className="text-gray-700">Suporte operacional completo</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-[#1082a6] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -220,7 +224,7 @@ export default function ParceiroPage() {
                     <svg className="w-6 h-6 text-[#1082a6] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    <span className="text-gray-700">Suporte operacional completo</span>
+                    <span className="text-gray-700">Comissionamento diferenciado</span>
                   </li>
                 </ul>
                 <button className="px-6 py-3 bg-[#1082a6] cursor-pointer hover:bg-[#0a6b8a] text-white font-medium rounded-md transition-colors">
@@ -268,13 +272,13 @@ export default function ParceiroPage() {
                     <svg className="w-6 h-6 text-[#1082a6] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    <span className="text-gray-700">Seguros residenciais e condominiais</span>
+                    <span className="text-gray-700">Seguros empresariais, residenciais e condominiais</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-[#1082a6] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
-                    <span className="text-gray-700">Comissionamento recorrente em renovações</span>
+                    <span className="text-gray-700">Comissionamento diferenciado</span>
                   </li>
                 </ul>
                 <button className="px-6 py-3 bg-[#1082a6] cursor-pointer hover:bg-[#0a6b8a] text-white font-medium rounded-md transition-colors">
