@@ -56,9 +56,9 @@ export default function ParceiroPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-700 mb-8">
-              A Trust oferece oportunidades exclusivas para profissionais e empresas 
-              que desejam expandir seus negócios no mercado de seguros. Conte com nossa estrutura,
-              tecnologia avançada e suporte completo para potencializar seus resultados.
+             A Trust oferece suporte exclusivo para profissionais e empresas do 
+             mercado imobiliario. Conte com nossa estrutura, soluções avançadas 
+             e suporte completo para potencializar seus resultados!
             </p>
           </div>
         </div>
