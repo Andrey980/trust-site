@@ -76,7 +76,7 @@ export default function SeguradorasContent() {
           Trabalhamos com as principais seguradoras
         </h1>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-1 justify-items-center place-items-center mx-auto max-w-4xl">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1 md:gap-1 justify-items-center place-items-center mx-auto max-w-6xl">
           {seguradoras.map((seguradora) => (
             <div 
               key={seguradora.nome} 

@@ -66,8 +66,19 @@ const quickActions = [
 
 export default function QuickActions() {
   return (
-    <section className="w-full bg-gray-50 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section 
+      className="w-full bg-gray-50 py-16 px-4 relative"
+      style={{
+        backgroundImage: 'url(/img/textura.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay para melhorar legibilidade */}
+      <div className="absolute inset-0 bg-white/80"></div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-4xl font-light text-[#50A3C5] mb-12 text-center">
           Como Podemos Te Ajudar?
         </h2>
