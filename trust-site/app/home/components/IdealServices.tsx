@@ -43,8 +43,19 @@ const services = [
 
 const IdealServices = () => {
   return (
-    <section className="py-16 px-4 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section 
+      className="py-16 px-4 bg-gray-50 relative"
+      style={{
+        backgroundImage: 'url(/img/textura.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay para melhorar legibilidade */}
+      <div className="absolute inset-0 bg-white/80"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Título */}
         <h2 className="text-center text-3xl font-light text-[#1082a6] mb-12 uppercase">
           principais produtos
