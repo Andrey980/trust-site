@@ -33,7 +33,7 @@ const services = [
       </svg>
     ),
     description: 'Proteção completa para seu patrimônio',
-    href: '/seguro-incendio',
+    href: 'https://app.pipefy.com/public/form/d8BuxFDA',
     bgColor: 'bg-[#085269]',
   },
 ];
