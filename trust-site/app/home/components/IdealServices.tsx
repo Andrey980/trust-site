@@ -53,6 +53,7 @@ const IdealServices = () => {
             <Link
               key={service.title}
               href={service.href}
+              target="_blank"
               className={`group rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${service.bgColor}`}
             >
               <div className="p-8">
