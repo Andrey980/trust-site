@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
@@ -21,6 +21,21 @@ interface ServiceType {
 export default function GarantiasPage() {
   const [activeTab, setActiveTab] = useState<string>('seguro-fianca');
   const [activeStepTab, setActiveStepTab] = useState<string>('step-1');
+  
+  // Hook para detectar hash na URL e ativar a aba correspondente
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && (hash === 'seguro-fianca' || hash === 'titulo-capitalizacao')) {
+      setActiveTab(hash);
+      // Scroll suave para a seção após um pequeno delay
+      setTimeout(() => {
+        const element = document.getElementById('servicos-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
   
   const services: ServiceType[] = [
     {
@@ -103,7 +118,7 @@ export default function GarantiasPage() {
       {/* Intro Section - Design diferenciado */}
       
       {/* Tabs Navigation */}
-      <section className="mt-10 bg-white border-b">
+      <section id="servicos-section" className="mt-10 bg-white border-b">
         <div className="container mx-auto px-4">
           <div className="flex">
             {services.map((service) => (

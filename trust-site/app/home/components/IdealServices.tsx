@@ -10,8 +10,9 @@ const services = [
       </svg>
     ),
     description: 'Garantia para locação de imóveis',
-    href: '/titulo-capitalizacao',
+    href: '/garantias#titulo-capitalizacao',
     bgColor: 'bg-[#1082a6]',
+    isExternal: false,
   },
   {
     title: 'SEGURO FIANÇA',
@@ -21,8 +22,9 @@ const services = [
       </svg>
     ),
     description: 'Garantia para locação de imóveis',
-    href: '/seguro-fianca',
+    href: '/garantias#seguro-fianca',
     bgColor: 'bg-[#0c6a87]',
+    isExternal: false,
   },
   {
     title: 'SEGURO INCÊNDIO',
@@ -33,8 +35,9 @@ const services = [
       </svg>
     ),
     description: 'Proteção completa para seu patrimônio',
-    href: 'https://app.pipefy.com/public/form/d8BuxFDA',
+    href: '/para-sua-empresa#seguro-empresarial',
     bgColor: 'bg-[#085269]',
+    isExternal: false,
   },
 ];
 
@@ -53,7 +56,6 @@ const IdealServices = () => {
             <Link
               key={service.title}
               href={service.href}
-              target="_blank"
               className={`group rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${service.bgColor}`}
             >
               <div className="p-8">

@@ -1,5 +1,5 @@
 'use client';
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WhatsappButton from '../components/WhatsappButton';
@@ -30,6 +30,22 @@ interface ServiceDetails {
 export default function ParaSuaEmpresaPage() {
   // Estado para controlar qual serviço está ativo
   const [activeService, setActiveService] = useState('seguro-empresarial');
+  
+  // Hook para detectar hash na URL e ativar o serviço correspondente
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash && hash !== activeService) {
+      setActiveService(hash);
+      // Scroll suave para a seção após um pequeno delay
+      setTimeout(() => {
+        const element = document.getElementById('service-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
     // Definindo os submenus para empresa conforme especificado
   const menuItems = [
     { id: 'celular', label: 'Celular' },
@@ -309,8 +325,9 @@ export default function ParaSuaEmpresaPage() {
       />
       
       {/* Seção de detalhes do serviço selecionado */}
-      {activeService && serviceDetails[activeService] && (
-        <ServiceInfo
+      <div id="service-section">
+        {activeService && serviceDetails[activeService] && (
+          <ServiceInfo
           serviceId={activeService}
           title={serviceDetails[activeService].title}
           description={serviceDetails[activeService].description}
@@ -318,7 +335,8 @@ export default function ParaSuaEmpresaPage() {
           coverages={serviceDetails[activeService].coverages}
           imageUrl={serviceDetails[activeService].imageUrl}
         />
-      )}
+        )}
+      </div>
       
       <BenefitsSection benefits={benefits} />
       <CtaSection 
