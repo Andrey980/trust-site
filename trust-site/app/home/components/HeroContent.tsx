@@ -31,7 +31,7 @@ const slides: SlideContent[] = [
     title: 'Sua família protegida em todos os momentos',
     subtitle: 'Seguro Residencial',
     buttonText: 'FAZER COTAÇÃO',
-    buttonLink: '#',
+    buttonLink: 'https://trust.aggilizador.com.br/',
     overlay: true,
     contentPosition: 'center',
     className: 'bg-gradient-to-t from-black/80 via-black/60 to-black/80'
