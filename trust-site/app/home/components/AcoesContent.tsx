@@ -5,7 +5,7 @@ const quickActions = [
   {
     id: 1,
     label: "Cotação",
-    href: "https://wa.me/5511933372957?text=Ol%C3%A1%21%20Eu%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o.",
+    href: "https://trust.aggilizador.com.br/",
     icon: (
       <svg className="w-8 h-8 text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -45,7 +45,7 @@ const quickActions = [
   {
     id: 5,
     label: "Resgate",
-    href: "#",
+    href: "https://app.pipefy.com/public/form/u1z5DGeM",
     icon: (
       <svg className="w-8 h-8 text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -55,7 +55,7 @@ const quickActions = [
   {
     id: 6,
     label: "Minha Renovação",
-    href: "#",
+    href: "https://wa.me/5511911527313?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20a%202%C2%AA%20via%20dos%20meus%20boletos",
     icon: (
       <svg className="w-8 h-8 text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />

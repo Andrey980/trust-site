@@ -98,6 +98,7 @@ const HeroContent = () => {
                 {slide.buttonText && (
                   <a
                     href={slide.buttonLink || '#'}
+                    target="_blank"
                     className="inline-block bg-[#1082a6] hover:bg-[#1082c9] cursor-pointer text-white px-6 py-2 rounded font-semibold transition-all duration-300 text-base uppercase tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                   >
                     {slide.buttonText}
