@@ -20,6 +20,7 @@ interface ServiceDetail {
   features: string[];
   coverages: string[];
   imageUrl: string;
+  ctaLink: string;
 }
 
 // Interface para o objeto serviceDetails
@@ -79,7 +80,8 @@ export default function ParaSuaEmpresaPage() {
         'Acessórios originais',
         'Perda total'
       ],
-      imageUrl: '/img/celular.png'
+      imageUrl: '/img/celular.png',
+      ctaLink: 'https://trust.aggilizador.com.br/several'
     },
     'consorcio': {
       title: 'Consórcio Empresarial',
@@ -95,7 +97,8 @@ export default function ParaSuaEmpresaPage() {
         'Imóveis comerciais',
         'Reformas e ampliações',
       ],
-      imageUrl: '/img/consorcio.png'
+      imageUrl: '/img/consorcio.png',
+      ctaLink: 'https://wa.me/5511933372957?text=Ol%C3%A1%21%20Gostaria%20de%20cotar%20um%20cons%C3%B3rcio.%20Pode%20me%20ajudar%3F'
     },
     'deo': {
       title: 'Seguro D&O (Directors & Officers)',
@@ -115,7 +118,8 @@ export default function ParaSuaEmpresaPage() {
         'Danos à imagem',
         'Processos trabalhistas contra gestores'
       ],
-      imageUrl: '/img/rc-profissional.png'
+      imageUrl: '/img/rc-profissional.png',
+      ctaLink: '/atendimento'
     },
     'portateis': {
       title: 'Equipamentos Portáteis Empresariais',
@@ -133,7 +137,8 @@ export default function ParaSuaEmpresaPage() {
         'Danos por líquidos',
         'Perda total'
       ],
-      imageUrl: '/img/equipamentos.png'
+      imageUrl: '/img/equipamentos.png',
+      ctaLink: 'https://trust.aggilizador.com.br/several'
     },
     'frota': {
       title: 'Seguro de Frota',
@@ -153,7 +158,8 @@ export default function ParaSuaEmpresaPage() {
         'Cobertura para vidros e acessórios',
         'Assistência para veículos de carga'
       ],
-      imageUrl: '/img/hero-car.png'
+      imageUrl: '/img/hero-car.png',
+      ctaLink: 'https://trust.aggilizador.com.br/auto'
     },
     'plano-saude': {
       title: 'Plano de Saúde Empresarial',
@@ -173,7 +179,8 @@ export default function ParaSuaEmpresaPage() {
         'Atendimento de urgência e emergência',
         'Serviços de telemedicina'
       ],
-      imageUrl: '/img/plano-de-saude.png'
+      imageUrl: '/img/plano-de-saude.png',
+      ctaLink: '/atendimento'
     },
     'responsabilidade-civil': {
       title: 'Seguro de Responsabilidade Civil',
@@ -189,7 +196,8 @@ export default function ParaSuaEmpresaPage() {
         'Operações comerciais e industriais',
         'Danos a terceiros em estabelecimentos',
       ],
-      imageUrl: '/img/rc-profissional.png'
+      imageUrl: '/img/rc-profissional.png',
+      ctaLink: '/atendimento'
     },
     'seguro-empresarial': {
       title: 'Seguro Empresarial',
@@ -209,7 +217,8 @@ export default function ParaSuaEmpresaPage() {
         'Lucros cessantes',
         'Responsabilidade civil operações'
       ],
-      imageUrl: '/img/residencial.png'
+      imageUrl: '/img/residencial.png',
+      ctaLink: '/atendimento'
     },
     'seguro-garantia': {
       title: 'Seguro Garantia',
@@ -229,7 +238,8 @@ export default function ParaSuaEmpresaPage() {
         'Garantia de retenção de pagamentos',
         'Garantia aduaneira'
       ],
-      imageUrl: '/img/condominio.png'
+      imageUrl: '/img/condominio.png',
+      ctaLink: '/atendimento'
     },
     'vida-empresarial': {
       title: 'Vida Empresarial',
@@ -249,7 +259,8 @@ export default function ParaSuaEmpresaPage() {
         'Despesas médicas hospitalares',
         'Diárias por incapacidade temporária'
       ],
-      imageUrl: '/img/vida.png'
+      imageUrl: '/img/vida.png',
+      ctaLink: 'https://trust.aggilizador.com.br/life'
     }
   };
 
@@ -334,6 +345,7 @@ export default function ParaSuaEmpresaPage() {
           features={serviceDetails[activeService].features}
           coverages={serviceDetails[activeService].coverages}
           imageUrl={serviceDetails[activeService].imageUrl}
+          ctaLink={serviceDetails[activeService].ctaLink}
         />
         )}
       </div>

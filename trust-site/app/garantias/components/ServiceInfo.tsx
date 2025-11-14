@@ -16,7 +16,6 @@ const ServiceInfo: React.FC<ServiceInfoProps> = ({
   description,
   features,
   // imageUrl
-  ctaLink = '/atendimento'
 }) => {
   const showSteps = title == "Seguro Fiança";
 
