@@ -21,6 +21,7 @@ interface ServiceDetail {
   features: string[];
   coverages: string[];
   imageUrl: string;
+  ctaLink: string;
 }
 
 // Interface para o objeto serviceDetails
@@ -67,7 +68,8 @@ export default function ParaVocePage() {
         'Cobertura para vidros, lanternas e retrovisores',
         'Proteção a passageiros'
       ],
-      imageUrl: '/img/hero-car.png'
+      imageUrl: '/img/hero-car.png',
+      ctaLink: 'https://trust.aggilizador.com.br/auto'
     },
     bike: {
       title: 'Seguro Bike',
@@ -87,7 +89,8 @@ export default function ParaVocePage() {
         'Despesas médicas e hospitalares',
         'Danos durante transporte'
       ],
-      imageUrl: '/img/bike.png'
+      imageUrl: '/img/bike.png',
+      ctaLink: 'https://trust.aggilizador.com.br/bike'
     },
     celular: {
       title: 'Seguro Celular',
@@ -107,7 +110,8 @@ export default function ParaVocePage() {
         'Acessórios originais',
         'Custos de reparo'
       ],
-      imageUrl: '/img/celular.png'
+      imageUrl: '/img/celular.png',
+      ctaLink: 'https://trust.aggilizador.com.br/several'
     },
     consorcio: {
       title: 'Consórcio',
@@ -127,7 +131,8 @@ export default function ParaVocePage() {
         'Cirurgias e procedimentos médicos',
         'Viagens e turismo'
       ],
-      imageUrl: '/img/consorcio.png'
+      imageUrl: '/img/consorcio.png',
+      ctaLink: 'https://wa.me/5511933372957?text=Ol%C3%A1%21%20Eu%20gostaria%20de%20cotar%20um%20cons%C3%B3rcio.'
     },
     portateis: {
       title: 'Equipamentos Portáteis',
@@ -147,7 +152,8 @@ export default function ParaVocePage() {
         'Acessórios originais',
         'Perda total'
       ],
-      imageUrl: '/img/equipamentos.png'
+      imageUrl: '/img/equipamentos.png',
+      ctaLink: 'https://trust.aggilizador.com.br/several'
     },
     odonto: {
       title: 'Plano Odontológico',
@@ -167,7 +173,8 @@ export default function ParaVocePage() {
         'Próteses e implantes',
         'Ortodontia'
       ],
-      imageUrl: '/img/odonto.png'
+      imageUrl: '/img/odonto.png',
+      ctaLink: '/atendimento'
     },
     'previdencia-privada': {
       title: 'Previdência Privada',
@@ -187,7 +194,8 @@ export default function ParaVocePage() {
         'Planejamento sucessório',
         'Proteção financeira familiar'
       ],
-      imageUrl: '/img/previdencia.png'
+      imageUrl: '/img/previdencia.png',
+      ctaLink: '/atendimento'
     },
     'rc-profissional': {
       title: 'Responsabilidade Civil Profissional',
@@ -207,7 +215,8 @@ export default function ParaVocePage() {
         'Perda de documentos de clientes',
         'Atos de colaboradores e subcontratados'
       ],
-      imageUrl: '/img/rc-profissional.png'
+      imageUrl: '/img/rc-profissional.png',
+      ctaLink: '/atendimento'
     },
     residencial: {
       title: 'Seguro Residencial',
@@ -227,7 +236,8 @@ export default function ParaVocePage() {
         'Responsabilidade civil familiar',
         'Quebra de vidros'
       ],
-      imageUrl: '/img/hero-home.png'
+      imageUrl: '/img/hero-home.png',
+      ctaLink: 'https://trust.aggilizador.com.br/residence'
     },
     vida: {
       title: 'Seguro de Vida',
@@ -247,7 +257,8 @@ export default function ParaVocePage() {
         'Assistência funeral familiar',
         'Despesas médico-hospitalares'
       ],
-      imageUrl: '/img/vida.png'
+      imageUrl: '/img/vida.png',
+      ctaLink: 'https://trust.aggilizador.com.br/life'
     },
     viagem: {
       title: 'Seguro Viagem',
@@ -267,7 +278,8 @@ export default function ParaVocePage() {
         'Cancelamento ou interrupção de viagem',
         'Invalidez permanente por acidente em viagem'
       ],
-      imageUrl: '/img/viagem.png'
+      imageUrl: '/img/viagem.png',
+      ctaLink: 'https://trust.aggilizador.com.br/travel'
     }
   };
 
@@ -391,6 +403,7 @@ export default function ParaVocePage() {
           features={serviceDetails[activeService].features}
           coverages={serviceDetails[activeService].coverages}
           imageUrl={serviceDetails[activeService].imageUrl}
+          ctaLink={serviceDetails[activeService].ctaLink}
         />
       )}
       

@@ -8,6 +8,7 @@ interface ServiceInfoProps {
   features: string[];
   coverages: string[];
   imageUrl?: string;
+  ctaLink?: string;
 }
 
 const ServiceInfo: React.FC<ServiceInfoProps> = ({
@@ -16,7 +17,8 @@ const ServiceInfo: React.FC<ServiceInfoProps> = ({
   description,
   features,
   coverages,
-  imageUrl
+  imageUrl,
+  ctaLink = '/atendimento'
 }) => {
   return (
     <div id={serviceId} className="py-12 bg-white">
@@ -55,9 +57,9 @@ const ServiceInfo: React.FC<ServiceInfoProps> = ({
             </div>
             
             <div className="mt-8">
-              <button className="bg-[#1082a6] hover:bg-[#1082c9] cursor-pointer text-white px-6 py-3 rounded font-medium transition-all duration-300">
+              <a href={ctaLink} className="inline-block bg-[#1082a6] hover:bg-[#1082c9] cursor-pointer text-white px-6 py-3 rounded font-medium transition-all duration-300">
                 Solicitar Cotação
-              </button>
+              </a>
             </div>
           </div>
           

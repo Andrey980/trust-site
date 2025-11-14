@@ -7,6 +7,7 @@ interface ServiceInfoProps {
   description: string;
   features: string[];
   imageUrl?: string;
+  ctaLink?: string;
 }
 
 const ServiceInfo: React.FC<ServiceInfoProps> = ({
@@ -15,6 +16,7 @@ const ServiceInfo: React.FC<ServiceInfoProps> = ({
   description,
   features,
   // imageUrl
+  ctaLink = '/atendimento'
 }) => {
   const showSteps = title == "Seguro Fiança";
 
