@@ -53,7 +53,7 @@ const menuLinks: MenuItem[] = [
   },
   { 
     href: '/garantias', 
-    label: 'Garantias',
+    label: 'Garantias Locatícias',
     submenu: [
       { href: '/seguro-fiança', label: 'Seguro Fiança' },
       { href: '/titulo-capitalizacao', label: 'Titulo Capitalização' },

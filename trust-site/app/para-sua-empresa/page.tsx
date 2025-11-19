@@ -298,7 +298,6 @@ export default function ParaSuaEmpresaPage() {
     },
   ];
 
-  // Dados para o FAQ
   const faqs = [
     {
       question: 'Qual o tamanho mínimo da empresa para contratar seguros empresariais?',
